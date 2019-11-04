@@ -9,6 +9,7 @@ class UrlMappings {
             }
         }
 
+        //Changes the default home page
         "/"{
             controller = "landingPage"
             action = "index"

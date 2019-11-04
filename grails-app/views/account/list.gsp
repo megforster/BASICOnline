@@ -10,19 +10,22 @@
 <html>
 <head>
     <meta name="layout" content="main"/>
-    <title>User List</title>
+    <title>User List</title> <%--Changes browser tab text--%>
+    <asset:link rel="icon" href="BASICLogo.jpg" type="image/x-ico"/> <%--Changes browser tab icon--%>
 </head>
 <body>
-<g:if test="${userList.size == 0}">
-    There are no users yet
+
+<%--Lists out every instance in the User database--%>
+<g:if test="${userList.size == 0}"> <%--If there are no instances in the User database--%>
+    There are no users yet <%--Print there aren't any users--%>
 </g:if>
-<g:else>
-    <table>
+<g:else> <%--Else list all the instances--%>
+    <table> <%--Formats the list nicer--%>
         <tr>
-            <g:each in="${userList}" var="user">
-                <td>${user.firstName}</td>
-                <td>${user.lastName}</td>
-                <td>${user.emailAddress}</td>
+            <g:each in="${userList}" var="user"> <%--for each instance in database User--%>
+                <td>${user.firstName}</td> <%--List the first name--%>
+                <td>${user.lastName}</td> <%--List the last name--%>
+                <td>${user.emailAddress}</td> <%--List the email address--%>
             </g:each>
         </tr>
     </table>

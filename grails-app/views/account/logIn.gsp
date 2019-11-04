@@ -8,22 +8,26 @@
 <%@ page contentType="text/html;charset=UTF-8" %>
 <html>
 <head>
-    <title>Welcome Back!</title>
-    <asset:link rel="icon" href="BASICLogo.jpg" type="image/x-ico"/>
+    <title>Welcome Back!</title> <%--Changes browser tab text--%>
+    <asset:link rel="icon" href="BASICLogo.jpg" type="image/x-ico"/> <%--Changes browser tab icon--%>
 </head>
 
 <body>
-<p><h4>Below users will be able to log in</h4></p>
-<g:form controller="account" action="submit">
-    <label>Email Address: </label>
-    <g:textField name="emailAddress"/><br/>
-    <label>Password: </label>
-    <g:passwordField name="password" value="${password}"/><br/>
-    <g:actionSubmit value="submit" params="${[emailAddress:emailAddress,password:password]}"/>
+<p><h4>Log in below!</h4></p>
+<g:form controller="account" action="submit"> <%--Form tag, associates the form with a controller and action--%>
+    <label>Email Address: </label> <%--Label form field--%>
+    <g:textField name="emailAddress"/><br/> <%--Associates what is typed into the form field with a key--%>
+    <label>Password: </label>  <%--Label form field--%>
+<%--Password fields don't show exactly what key is typed, just dots for each key typed--%>
+    <g:passwordField name="password" value="${password}"/><br/> <%--Associates what is typed into the form field with a key --%>
+<%--The submit button goes in the form block so it can send the information typed into the fields (its in the same scope as the info)--%>
+    <g:actionSubmit value="Submit" params="${[emailAddress:emailAddress,password:password]}"/> <%--Creates a submit button and sends
+                                                           the parameters listed to the "submit" action the form is associated with--%>
 </g:form>
 
-<g:link action="goToLandingPage">
-    <input type="button" value="Home" class="button"/>
+<%--Button to send users back to the initial landing --%>
+<g:link action="goToLandingPage"> <%--Will be changed latter--%>
+    <input type="button" value="Home" class="button"/> <%--What makes it a button--%>
 </g:link>
 
 </body>
