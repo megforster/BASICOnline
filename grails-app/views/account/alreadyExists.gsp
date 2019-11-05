@@ -21,7 +21,7 @@
 </g:link>
 
 <%--Button to send users back to the initial landing --%>
-<g:link action="goToLandingPage"> <%--Will be changed latter--%>
+<g:link controller = "landingPage" action="goToLandingPage"> <%--Will be changed latter--%>
     <input type="button" value="Home" class="button"/> <%--What makes it a button--%>
 </g:link>
 </body>
