@@ -13,7 +13,8 @@
 </head>
 
 <body>
-<p><h4>Your account has been created!</h4></p>
+<p><h4>Your account has been created!</h4></p><%--Page header--%>
+<p>Please use the button below to log into your new account!</p>
 
 <%--Button to send users back to the log in page --%>
 <g:link action="logIn"><%--Associates the button with the action pressing it will perform--%>

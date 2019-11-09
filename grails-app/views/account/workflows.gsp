@@ -1,0 +1,23 @@
+<%--
+  Created by IntelliJ IDEA.
+  User: meganforster
+  Date: 11/9/19
+  Time: 12:03 PM
+--%>
+
+<%@ page contentType="text/html;charset=UTF-8" %>
+<html>
+<head>
+    <title>Workflow Overview</title><%--Changes browser tab text--%>
+    <asset:link rel="icon" href="BASICLogo.jpg" type="image/x-ico"/> <%--Changes browser tab icon--%>
+</head>
+
+<body>
+<p>Here will be where users can access their available workflows</p> <%--temporary description of page purpose--%>
+<br>
+<br>
+<p><h4>Welcome back ${usr.firstName}</h4></p><%--Page header--%>
+<p>Please select a workflow from below to get started! You can chose a completely new workflow or work on improving your score for one you've already one.</p>
+
+</body>
+</html>

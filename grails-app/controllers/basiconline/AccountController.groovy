@@ -16,8 +16,10 @@ class AccountController {
         def email = params.emailAddress //sets a variable named email to have a value passed to it associated with the key emailAddress
         def passwrd = params.password //sets a variable named passwrd to have a value passed to it associated with the key password
         def usr = Users.findByEmailAddressAndPassword(email, passwrd) //uses a dynamic finder to search the database for an instance with the specified variables
-        if(usr!=null){
-            render("Welcome Back $usr.firstName") //renders text on screen and accesses the usr instance's firstName variable
+        if(usr!=null&& usr.placementExam==true){
+            render(view: "workflows", model: [usr: usr]) //renders the view users can select workflows from and passes the view the users information
+        }else if(usr!=null&& usr.placementExam==false) {
+            render(view: "placementExam", model: [usr:usr])
         }else{
             render("You either entered an incorrect email or password, or you do not have an account yet!!") //prints text to the screen
         }
@@ -48,7 +50,15 @@ class AccountController {
     //Logic handles logging a user in as a guest using a default guest account auto-populated into the database
     def guestUsr(){
         def usr = Users.findByEmailAddressAndPassword("-", "guest") //uses a dynamic finder to search the database for an instance with the specified variables
-        render("Welcome $usr.firstName") //renders text on screen and accesses the usr instance's firstName variable
+        render(view: "placementExam", model: [usr: usr]) //renders the view users can select workflows from and passes the view the users information
+    }
+
+    //Displays user's result from the placement exam and updates their account info to reflect they've completed the placement exam and their result
+    def results(){
+        def usr = params //copies the same user as referenced in the placement exam
+        //Supposed to change the user's placement exam status to true
+        Users.executeUpdate("update Users set placementExam = true where firstName = usr.firstName and lastName = usr.lastName and emailAddress = usr.emailAddress")
+        render(view: "results", model: [usr: usr]) //renders the results view and passes it the user
     }
 
 }

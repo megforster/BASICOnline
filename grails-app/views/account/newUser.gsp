@@ -24,7 +24,7 @@
     <label>Password: </label> <%--Label form field--%>
     <%--Password fields don't show exactly what key is typed, just dots for each key typed--%>
         <g:passwordField name="password"/><br/><br><%--Associates what is typed into the form field with a key--%>
-        <g:actionSubmit value="create"/><%--Creates a submit button and sends
+        <g:actionSubmit value="Create"/><%--Creates a submit button and sends
                                         the parameters listed to the "creation" action the form is associated with--%>
 </g:form>
 

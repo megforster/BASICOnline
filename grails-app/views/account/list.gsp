@@ -4,7 +4,7 @@
   Date: 10/30/19
   Time: 9:44 PM
 --%>
-
+<%--For testing purposes, will be removed from final product--%>
 <%@ page contentType="text/html;charset=UTF-8" %>
 <!DOCTYPE html>
 <html>
@@ -26,6 +26,8 @@
                 <td>${user.firstName}</td> <%--List the first name--%>
                 <td>${user.lastName}</td> <%--List the last name--%>
                 <td>${user.emailAddress}</td> <%--List the email address--%>
+                <td>${user.placementExam}</td> <%--List the whether user has taken placement exam--%>
+                <td>${user.placementLevel}</td> <%--List the user's palcement level--%>
             </g:each>
         </tr>
     </table>
