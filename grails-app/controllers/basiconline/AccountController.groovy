@@ -55,10 +55,16 @@ class AccountController {
 
     //Displays user's result from the placement exam and updates their account info to reflect they've completed the placement exam and their result
     def results(){
-        def usr = params //copies the same user as referenced in the placement exam
-        //Supposed to change the user's placement exam status to true
-        Users.executeUpdate("update Users set placementExam = true where firstName = usr.firstName and lastName = usr.lastName and emailAddress = usr.emailAddress")
+        def usr = Users.findByEmailAddressAndPassword(params.emailAddress, params.password) //finds the current user's account
+        usr.placementExam = true  //change the user's placement exam status to true
+        //usr. placementLevel =
+        usr.save() //saves the account update to the database
         render(view: "results", model: [usr: usr]) //renders the results view and passes it the user
+    }
+
+    def workflows(){
+        def usr = Users.findByEmailAddressAndPassword(params.emailAddress, params.password) //finds the current user's account
+        render(view: "workflows", model: [firstName: usr.firstName]) //renders the workflows view and passes it the user's first name
     }
 
 }

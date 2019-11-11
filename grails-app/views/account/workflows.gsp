@@ -16,7 +16,7 @@
 <p>Here will be where users can access their available workflows</p> <%--temporary description of page purpose--%>
 <br>
 <br>
-<p><h4>Welcome back ${usr.firstName}</h4></p><%--Page header--%>
+<p><h4>Welcome back ${firstName}</h4></p><%--Page header--%>
 <p>Please select a workflow from below to get started! You can chose a completely new workflow or work on improving your score for one you've already one.</p>
 
 </body>

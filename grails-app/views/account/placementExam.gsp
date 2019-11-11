@@ -21,7 +21,7 @@
 <p>As another note, whatever placement level you wind up in is not a negative refection of your abilities or potential. In fact, this tool was made for users with little experience!</p>
 
 <%--Button to submit placement exam--%>
-<g:link controller = "Account" action="results" params ="${[usr:usr]}">
+<g:link controller = "Account" action="results" params ="${[emailAddress: usr.emailAddress, password: usr.password]}">
 <input type="button" value="Finish and Submit" class="button"/> <%--What makes it a button--%>
 </g:link>
 </body>
