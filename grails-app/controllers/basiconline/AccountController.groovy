@@ -15,7 +15,8 @@ class AccountController {
     def submit(){
         def email = params.emailAddress //sets a variable named email to have a value passed to it associated with the key emailAddress
         def passwrd = params.password //sets a variable named passwrd to have a value passed to it associated with the key password
-        def usr = Users.findByEmailAddressAndPassword(email, passwrd) //uses a dynamic finder to search the database for an instance with the specified variables
+        def usr = Users.findByEmailAddressAndPassword(email, passwrd) //uses a dynamic finder to search the database for an instance with the
+                                                                      // specified variables
         if(usr!=null&& usr.placementExam==true){
             render(view: "workflows", model: [usr: usr]) //renders the view users can select workflows from and passes the view the users information
         }else if(usr!=null&& usr.placementExam==false) {
@@ -49,17 +50,22 @@ class AccountController {
 
     //Logic handles logging a user in as a guest using a default guest account auto-populated into the database
     def guestUsr(){
-        def usr = Users.findByEmailAddressAndPassword("-", "guest") //uses a dynamic finder to search the database for an instance with the specified variables
-        render(view: "placementExam", model: [usr: usr]) //renders the view users can select workflows from and passes the view the users information
+        def usr = Users.findByEmailAddressAndPassword("-", "guest") //uses a dynamic finder to
+                                                                                          // search the database for an instance with
+                                                                                          //the specified variables
+        render(view: "placementExam", model: [usr: usr]) //renders the view users can select workflows
+                                                         // from and passes the view the users information
     }
 
     //Displays user's result from the placement exam and updates their account info to reflect they've completed the placement exam and their result
     def results(){
-        def usr = Users.findByEmailAddressAndPassword(params.emailAddress, params.password) //finds the current user's account
-        usr.placementExam = true  //change the user's placement exam status to true
+        def usr = Users.findOrSaveByEmailAddressAndPassword(params.emailAddress, params.password) //finds the current user's account
+        usr.setPlacementExam(true)//change the user's placement exam status to true
         //usr. placementLevel =
-        usr.save() //saves the account update to the database
-        render(view: "results", model: [usr: usr]) //renders the results view and passes it the user
+        usr.save(flush:true) //saves the account update to the database
+
+        //render(usr.placementExam)
+       render(view: "results", model: [usr: usr]) //renders the results view and passes it the user
     }
 
     def workflows(){
