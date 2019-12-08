@@ -4,7 +4,7 @@ class InstructionsController {
 
     def index() { }
 
-    def goToMainInstructions(){
-        render(view: "mainInstruction") <%--renders calls the main instruction view--%>
+    def placeholder(){
+        render(view: "placeholder")
     }
 }
