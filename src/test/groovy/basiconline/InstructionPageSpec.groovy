@@ -3,7 +3,7 @@ package basiconline
 import grails.testing.web.controllers.ControllerUnitTest
 import spock.lang.Specification
 
-class InstructionPageSpec extends Specification implements ControllerUnitTest<InstructionPage> {
+class InstructionPageSpec extends Specification implements ControllerUnitTest {
 
     def setup() {
     }
