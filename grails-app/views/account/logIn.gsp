@@ -19,6 +19,7 @@
 <%--The <a></a> tags here create links to a specific action, since the actions it lists are not in the same controller as the view you have to specify the controller too. The text between the tags is the text of the label--%>
 <div class="form">
     <forms>
+
         %{--        <p><h4>If you would like to save your progress, please
                         <a href="${g.createLink(controller : 'account', action : 'newUser',params : [])}">create an account</a>,
                         <a href="${g.createLink(controller : 'account', action : 'logIn',params : [])}">log in</a>, or
@@ -28,19 +29,20 @@
 
             <div class= "input-box">
                 <i class="fa fa-user" aria-hidden="true"></i>
-                <input type="text" name="" placeholder="Email" required=" ">
+                <g:textField type="text" name="emailAddress" placeholder="Email" required=" "/><br/>
             </div>
             <div class = "input-box">
                 <i class="fa fa-unlock-alt" aria-hidden = "true"></i>
-                <input type="password" name="" placeholder="Password" required="">
+                <g:passwordField type="password" name="password" placeholder="Password" required =" " value="${password}"/><br/>
             </div>
-            <div class = "input-box">
 
+            <div class="input-box">
                 <%--The submit button goes in the form block so it can send the information typed into the fields (its in the same scope as the info)--%>
-                <g:actionSubmit value="Login" params="${[emailAddress:emailAddress,password:password]}"/> <%--Creates a submit button and sends
+                <g:actionSubmit value="Submit" params="${[emailAddress:emailAddress,password:password]}"/> <%--Creates a submit button and sends
                                                           the parameters listed to the "submit" action the form is associated with--%>
             </div>
         </g:form>
+
         <a href="#">Forgot Password</a>
     </forms>
 </div>
