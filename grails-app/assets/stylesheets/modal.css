@@ -1,0 +1,21 @@
+.btn-primary{
+    background-color:#B9BC47!important;
+    border: none;
+}
+
+.btn-primary:hover, .btn-primary:focus, .btn-primary:active{
+    background-color:#B9BA90!important;
+    border: none;
+}
+
+.modal-body{
+    text-align: left;
+}
+
+.modal {
+    position:fixed;
+}
+
+.modal-dialog{
+    position: relative;
+}
