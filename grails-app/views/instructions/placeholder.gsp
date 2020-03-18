@@ -63,6 +63,11 @@
     </div>
 </div>
 
+<div>
+    <iframe id="containsOnlineStore" title="BASIC Online Store" width = "1280" height = "550" src = "../../OnlineStore/Views/index.html" >
+    </iframe>
+</div>
+
 </body>
 </html>
 
