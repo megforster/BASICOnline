@@ -62,11 +62,14 @@
         </div>
     </div>
 </div>
+<br>
+<div style="margin-top:25px;">
+    <iframe src = "storetwo" width = "1280" height = "550">
 
-<div>
-    <iframe id="containsOnlineStore" title="BASIC Online Store" width = "1280" height = "550" src = "../../OnlineStore/Views/index.html" >
     </iframe>
 </div>
+
+
 
 </body>
 </html>
