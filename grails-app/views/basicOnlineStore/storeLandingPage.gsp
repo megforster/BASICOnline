@@ -29,7 +29,7 @@
 
 <script src="//code.jquery.com/jquery.min.js"></script>
 <script>
-    $.get("everypage.html", function(data){
+    $.get("${g.createLink(controller : 'basicOnlineStore', action : 'header',params : [])}", function(data){
         $("#nav-placeholder").replaceWith(data);
     });
 </script>
@@ -128,7 +128,7 @@
         crossorigin="anonymous"></script>
 
 <script type="text/javascript" src="//cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.min.js"></script>
-<script src="../js/main.js"></script>
+<script src="../assets/main.js"></script>
 
 </body>
 </html>

@@ -132,4 +132,8 @@ class BasicOnlineStoreController {
         render(view: "WomensTops")
     }
 
+    def header(){
+        render(view: "everypage")
+    }
+
 }

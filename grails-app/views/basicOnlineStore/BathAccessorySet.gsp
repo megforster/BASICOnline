@@ -39,7 +39,7 @@
 
 <script src="//code.jquery.com/jquery.min.js"></script>
 <script>
-    $.get("everypage.html", function(data){
+    $.get("${g.createLink(controller : 'basicOnlineStore', action : 'header',params : [])}", function(data){
         $("#nav-placeholder").replaceWith(data);
     });
 </script>

@@ -1,4 +1,3 @@
-<!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
@@ -70,7 +69,7 @@
             <div class="collapse navbar-collapse" id="navbarNav">
                 <ul class="navbar-nav">
                     <li class="nav-item active">
-                        <a class="nav-link" href="storeLandingPage.gsp">LANDING PAGE<span class="sr-only">(current)</span></a>
+                        <a class="nav-link" href="${g.createLink(controller : 'basicOnlineStore', action : 'renderFinalView',params : [])}">LANDING PAGE<span class="sr-only">(current)</span></a>
                     </li>
 
                     <div class="dropdown">
@@ -79,9 +78,9 @@
                             WOMEN
                         </button>
                         <div class="dropdown-menu" aria-labelledby="dropdownMenuButtonWomen">
-                            <a class="dropdown-item" href="WomensActiveWear.gsp">ACTIVE WEAR</a>
-                            <a class="dropdown-item" href="WomensTops.gsp">TOPS</a>
-                            <a class="dropdown-item" href="WomensBottoms.gsp">BOTTOMS</a>
+                            <a class="dropdown-item" href="${g.createLink(controller : 'basicOnlineStore', action : 'womensActiveWear',params : [])}">ACTIVE WEAR</a>
+                            <a class="dropdown-item" href="${g.createLink(controller : 'basicOnlineStore', action : 'womensTops',params : [])}">TOPS</a>
+                            <a class="dropdown-item" href="${g.createLink(controller : 'basicOnlineStore', action : 'womensBottoms',params : [])}">BOTTOMS</a>
                         </div>
 
                     </div>
@@ -92,9 +91,9 @@
                             MEN
                         </button>
                         <div class="dropdown-menu" aria-labelledby="dropdownMenuButtonMen">
-                            <a class="dropdown-item" href="MensActiveWear.gsp">ACTIVE WEAR</a>
-                            <a class="dropdown-item" href="MensTops.gsp">TOPS</a>
-                            <a class="dropdown-item" href="MensBottoms.gsp">BOTTOMS</a>
+                            <a class="dropdown-item" href="${g.createLink(controller : 'basicOnlineStore', action : 'mensActiveWear',params : [])}">ACTIVE WEAR</a>
+                            <a class="dropdown-item" href="${g.createLink(controller : 'basicOnlineStore', action : 'mensTops',params : [])}">TOPS</a>
+                            <a class="dropdown-item" href="${g.createLink(controller : 'basicOnlineStore', action : 'mensBottoms',params : [])}">BOTTOMS</a>
                         </div>
                     </div>
 
@@ -104,10 +103,10 @@
                             KIDS
                         </button>
                         <div class="dropdown-menu" aria-labelledby="dropdownMenuButtonKid">
-                            <a class="dropdown-item" href="KidsGraphicTees.gsp">GRAPHIC TEES</a>
-                            <a class="dropdown-item" href="KidsTops.gsp">TOPS</a>
-                            <a class="dropdown-item" href="KidsJeans.gsp">JEANS</a>
-                            <a class="dropdown-item" href="KidsDresses.gsp">DRESSES</a>
+                            <a class="dropdown-item" href="${g.createLink(controller : 'basicOnlineStore', action : 'kidsGraphicTees',params : [])}">GRAPHIC TEES</a>
+                            <a class="dropdown-item" href="${g.createLink(controller : 'basicOnlineStore', action : 'kidsTops',params : [])}">TOPS</a>
+                            <a class="dropdown-item" href="${g.createLink(controller : 'basicOnlineStore', action : 'kidsJeans',params : [])}">JEANS</a>
+                            <a class="dropdown-item" href="${g.createLink(controller : 'basicOnlineStore', action : 'kidsDresses',params : [])}">DRESSES</a>
                         </div>
                     </div>
 
@@ -117,9 +116,9 @@
                             OUTERWEAR
                         </button>
                         <div class="dropdown-menu" aria-labelledby="dropdownMenuButtonOuterwear">
-                            <a class="dropdown-item" href="WomensCoats.gsp">WOMEN'S COATS </a>
-                            <a class="dropdown-item" href="MensCoats.gsp">MEN'S COATS</a>
-                            <a class="dropdown-item" href="KidsCoats.gsp">KID'S COATS</a>
+                            <a class="dropdown-item" href="${g.createLink(controller : 'basicOnlineStore', action : 'womensCoats',params : [])}">WOMEN'S COATS </a>
+                            <a class="dropdown-item" href="${g.createLink(controller : 'basicOnlineStore', action : 'mensCoats',params : [])}">MEN'S COATS</a>
+                            <a class="dropdown-item" href="${g.createLink(controller : 'basicOnlineStore', action : 'kidsCoats',params : [])}">KID'S COATS</a>
                         </div>
                     </div>
 
@@ -129,9 +128,9 @@
                             SHOES
                         </button>
                         <div class="dropdown-menu" aria-labelledby="dropdownMenuButtonShoe">
-                            <a class="dropdown-item" href="WomensShoes.gsp">WOMEN'S SHOES</a>
-                            <a class="dropdown-item" href="MensShoes.gsp">MEN'S SHOES</a>
-                            <a class="dropdown-item" href="KidsShoes.gsp">KID'S SHOES</a>
+                            <a class="dropdown-item" href="${g.createLink(controller : 'basicOnlineStore', action : 'womensShoes',params : [])}">WOMEN'S SHOES</a>
+                            <a class="dropdown-item" href="${g.createLink(controller : 'basicOnlineStore', action : 'mensShoes',params : [])}">MEN'S SHOES</a>
+                            <a class="dropdown-item" href="${g.createLink(controller : 'basicOnlineStore', action : 'kidsShoes',params : [])}">KID'S SHOES</a>
                         </div>
                     </div>
 
@@ -141,9 +140,9 @@
                             HOME
                         </button>
                         <div class="dropdown-menu" aria-labelledby="dropdownMenuButtonHome">
-                            <a class="dropdown-item" href="Bedding.gsp">BEDDING</a>
-                            <a class="dropdown-item" href="Decor.gsp">DECOR</a>
-                            <a class="dropdown-item" href="Bath.gsp">BATH</a>
+                            <a class="dropdown-item" href="${g.createLink(controller : 'basicOnlineStore', action : 'bedding',params : [])}">BEDDING</a>
+                            <a class="dropdown-item" href="${g.createLink(controller : 'basicOnlineStore', action : 'decor',params : [])}">DECOR</a>
+                            <a class="dropdown-item" href="${g.createLink(controller : 'basicOnlineStore', action : 'bath',params : [])}">BATH</a>
                         </div>
                     </div>
                 </ul>
@@ -154,7 +153,7 @@
                     <i class="fas fa-search p-2"></i>
                 </li>
                 <li class="nav-item border rounded-circle mx-2 basket-icon">
-                    <a class="fas fa-shopping-basket p-2" href="ShoppingCart.gsp"></a>
+                    <a class="fas fa-shopping-basket p-2" href="${g.createLink(controller : 'basicOnlineStore', action : 'shoppingCart',params : [])}"></a>
                 </li>
             </div>
         </nav>
