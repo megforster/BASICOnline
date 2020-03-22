@@ -19,7 +19,7 @@
 </head>
 
 <body><%--Text displayed--%>
-<p style="margin: 10px;"><h4>Workflow # ?: Title</h4></p>
+<p style="margin: 10px;"><h4>basiconline.Workflow # ?: Title</h4></p>
 <!-- Button trigger modal -->
 <button type="button"  class="btn btn-primary" data-toggle="modal" data-target="#instructionModal">
     Task Instructions
