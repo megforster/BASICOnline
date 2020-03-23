@@ -11,8 +11,7 @@
     <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" rel="stylesheet">
 
     <!-- Font Awesome CDN -->
-    <g:javascript src="https://kit.fontawesome.com/4e611744ca.js" crossorigin="anonymous"/>
-    %{--<script src="https://kit.fontawesome.com/4e611744ca.js" crossorigin="anonymous"></script>--}%
+   <script src="https://kit.fontawesome.com/4e611744ca.js" crossorigin="anonymous"></script>
 
     <script src="https://code.jquery.com/jquery-3.4.1.slim.min.js"
             integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n"
@@ -23,8 +22,7 @@
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js"
             integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6"
             crossorigin="anonymous"></script>
-    %{--<script src="../js/cart.js" async></script>--}%
-    <g:javascript src="cart.js"/>
+    <asset:javascript src="cart.js"/>
     <link rel="stylesheet" href="${resource(dir: 'css', file: 'cart.css')}" type="text/css">
     <link rel="icon" href="../assets/BASIC logo.jpg">
 </head>

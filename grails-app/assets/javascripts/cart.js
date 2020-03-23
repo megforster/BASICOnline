@@ -9,6 +9,13 @@ if (document.readyState == "loading") {
 var tempCart=[]
 var saveCart = []
 
+/*
+Known Issues In Priority Order
+- Cart doesnt save amount of an item so reloading defaults to 1
+- Doesn't detect when an item is already in the cart
+ */
+
+
 function ready() {
     var removeCartItemButtons = document.getElementsByClassName("btn-danger")
     for (var i = 0; i < removeCartItemButtons.length; i++) {
@@ -42,7 +49,6 @@ function ready() {
 
 //Seems to work may need further testing
 function removeCartItem(event) {
-    console.log("removeCartItem")
     var buttonClicked = event.target
     buttonClicked.parentElement.parentElement.remove()
     updateCartTotal()
@@ -60,7 +66,7 @@ function removeCartItem(event) {
 
 }
 
-//after you click purchase the purchase button is unresponsive when it should say nothing in cart
+
 function purchaseClicked(){
     console.log("Purchase button was clicked")
     if(JSON.parse(sessionStorage.getItem("cart")).length>0){
@@ -77,18 +83,17 @@ function purchaseClicked(){
 
 }
 
-//If the quantity changes need to update value in array
 function quantityChanged(event) {
-    console.log("quantityChanged")
     var input = event.target
     if (isNaN(input.value) || input.value <= 0) {
         input.value = 1
     }
+
     updateCartTotal()
+
 }
 
 function addToCartClicked(event) {
-    console.log("addToCartClicked")
     var title = sessionStorage.getItem("title")
     var price = sessionStorage.getItem("price")
     Number(price)
@@ -99,22 +104,18 @@ function addToCartClicked(event) {
 
 
 function loadCart(){
-    console.log("loadCart")
     if(sessionStorage.getItem("cart")!=null) {
         var cartItems = document.getElementsByClassName("cart-items")[0]
         //console.log("HERE")
         var temp = JSON.parse(sessionStorage.getItem("cart"))
         for (var i = 0; i < temp.length; i++) {
-            //console.log("LOOP 1")
             saveCart[i] = temp[i]
         }
         if(sessionStorage.getItem("cart")!=null){
             tempCart = JSON.parse(sessionStorage.getItem("cart"))
-            //console.log(tempCart.length)
             for(var i = 0; i<tempCart.length; i++){
                 var cartRow2 = document.createElement('div')
                 cartRow2.classList.add("cart-row")
-                //console.log("tempCart[i] "+tempCart[i])
                 cartRow2.innerHTML = tempCart[i]
                 cartItems.append(cartRow2)
                 cartRow2.getElementsByClassName('btn-danger')[0].addEventListener('click', removeCartItem)
@@ -131,7 +132,7 @@ function addItemToCart(title, price, imageSrc) {
     var cartItems = document.getElementsByClassName("cart-items")[0]
     var cartItemNames = cartItems.getElementsByClassName("cart-item-title")
 
-    //This doesn't work
+    //This doesn't work whoops
     for(var i = 0; i<cartItemNames.length;i++){
         if(cartItemNames[i].innerText==title){
             alert("This item is already in your cart")
@@ -155,25 +156,14 @@ function addItemToCart(title, price, imageSrc) {
     cartRow.getElementsByClassName('cart-quantity-input')[0].addEventListener('change', quantityChanged)
 
 
-        //console.log("FINISHED LOOP 1")
-        /*for(var i = 0; i<saveCart.length;i++){
-            //console.log("In saveCart "+saveCart[i])
-
-        }*/
-        //console.log("FINISHED LOOP 2")
-
-
     saveCart.push(cartRowContents)
-    //console.log("Going into saveCart "+cartRowContents)
-
 
     sessionStorage.setItem("cart", JSON.stringify(saveCart))
-    //console.log("sending to session storage "+JSON.stringify(saveCart))
+
     sessionStorage.setItem("URI", "http://localhost:63342/WorkingCopy/OnlineStore/Views/ShoppingCart.html")
 }
 
 function updateCartTotal() {
-    console.log("updateCartTotal")
     var cartItemContainer = document.getElementsByClassName("cart-items")[0]
     var cartRows = cartItemContainer.getElementsByClassName("cart-row")
     var total = 0
@@ -185,8 +175,7 @@ function updateCartTotal() {
         var quantity = quantityElement.value
         total = total + (price * quantity)
     }
-    //Low priority issue, get total to display .90 instead of .9
-    total = Math.round(total * 100) / 100
+    total = (Math.round(total * 100) / 100).toFixed(2)
     document.getElementsByClassName('cart-total-price')[0].innerText = '$' + total
 }
 
