@@ -26,7 +26,7 @@
 </button>
 
 <!-- Modal -->
-<div class="modal fade" id="instructionModal" tabindex="-1" role="dialog" aria-labelledby="instructionModalLabel" aria-hidden="true">
+<div class="modal fade" id="instructionModal" tabindex="-1" role="dialog" aria-labelledby="instructionModalLabel">
     <div class="modal-dialog" role="document">
         <div class="modal-content">
             <div class="modal-header">
@@ -42,6 +42,14 @@
         </div>
     </div>
 </div>
+
+
+<!-- Code to have instruction modal open when page loads -->
+<script>$(document).ready(function() {
+    $('#instructionModal').modal('show');
+});</script>
+
+
 
 <!-- Button trigger modal -->
 <button type="button"  class="btn btn-primary" data-toggle="modal" data-target="#solutionModal">
