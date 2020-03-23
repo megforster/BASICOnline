@@ -19,7 +19,7 @@
 </head>
 
 <body><%--Text displayed--%>
-<p style="margin: 10px;"><h4>basiconline.Workflow # ?: Title</h4></p>
+<p style="margin: 10px;"><h4>Activity # ${workflow.number}: ${workflow.title}</h4></p>
 <!-- Button trigger modal -->
 <button type="button"  class="btn btn-primary" data-toggle="modal" data-target="#instructionModal">
     Task Instructions
@@ -36,7 +36,7 @@
                 </button>
             </div>
             <div class="modal-body">
-                <p>Here are the task instructions</p>
+                <p>${workflow.directions}</p>
                 <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
             </div>
         </div>
@@ -56,7 +56,7 @@
                 <h5 class="modal-title" id="solutionModalLabel">Solution</h5>
             </div>
             <div class="modal-body">
-                <p>Here are the step by step solutions</p>
+                <p>${workflow.solution}s</p>
                 <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
             </div>
         </div>
