@@ -111,7 +111,11 @@ header .site-title {
 }
 
 .modal {
-    position:relative;
+    position: relative;
+}
+
+.modal-dialog{
+    position: fixed;
 }
 
 
@@ -131,6 +135,3 @@ header .site-title {
 
 }
 
-.modal-dialog{
-    position: fixed;
-}

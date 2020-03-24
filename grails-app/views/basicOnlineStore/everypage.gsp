@@ -14,6 +14,7 @@
     <link rel="stylesheet" href="${resource(dir: 'css', file: 'header.css')}" type="text/css">
 
 </head>
+
 <body>
 <header>
     <body>
@@ -21,21 +22,25 @@
         <div class="row">
             <div class="col-md-4 col-sm-12 col-12">
             </div>
+
             <div class="col-md-4 col-12 text-center">
                 <h2 class="my-md-3 site-title text-white">BASIC Online Store</h2>
             </div>
+
             <div class="col-md-4 col-12 text-right">
                 <p class="my-md-4 header-links">
                     <!--MODAL START-->
                     <button type=button" class="btn btn-info" data-toggle="modal" data-target="#signIn">Sign In</button>
                     <button type=button" class="btn btn-info" data-toggle="modal" data-target="#create">Create Account
                     </button>
+
                     <div id="signIn" class="modal fade" role="dialog" tabindex="-1">
                         <div class="modal-dialog" data-dismiss="modal">
                             <div class="modal-content">
                                 <div class="modal-body">
+
                 <p>Since this is a mock online store, we won't have you sign into an actual account. But this is where
-                    the sign in option typically is on web pages!</p>
+                the sign in option typically is on web pages!</p>
                 <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
             </div>
         </div>
@@ -48,7 +53,7 @@
             <div class="modal-content">
                 <div class="modal-body">
                     <p>Since this is a mock online store, we won't have you create an actual account. But this is where
-                        the sign in option typically is on web pages!</p>
+                    the sign in option typically is on web pages!</p>
                     <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
                 </div>
             </div>
@@ -66,10 +71,13 @@
                     aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
                 <span class="navbar-toggler-icon"></span>
             </button>
+
             <div class="collapse navbar-collapse" id="navbarNav">
                 <ul class="navbar-nav">
                     <li class="nav-item active">
-                        <a class="nav-link" href="${g.createLink(controller : 'basicOnlineStore', action : 'renderFinalView',params : [])}">LANDING PAGE<span class="sr-only">(current)</span></a>
+                        <a class="nav-link"
+                           href="${g.createLink(controller: 'basicOnlineStore', action: 'renderFinalView', params: [])}">LANDING PAGE<span
+                                class="sr-only">(current)</span></a>
                     </li>
 
                     <div class="dropdown">
@@ -77,10 +85,14 @@
                                 data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
                             WOMEN
                         </button>
+
                         <div class="dropdown-menu" aria-labelledby="dropdownMenuButtonWomen">
-                            <a class="dropdown-item" href="${g.createLink(controller : 'basicOnlineStore', action : 'womensActiveWear',params : [])}">ACTIVE WEAR</a>
-                            <a class="dropdown-item" href="${g.createLink(controller : 'basicOnlineStore', action : 'womensTops',params : [])}">TOPS</a>
-                            <a class="dropdown-item" href="${g.createLink(controller : 'basicOnlineStore', action : 'womensBottoms',params : [])}">BOTTOMS</a>
+                            <a class="dropdown-item"
+                               href="${g.createLink(controller: 'basicOnlineStore', action: 'womensActiveWear', params: [])}">ACTIVE WEAR</a>
+                            <a class="dropdown-item"
+                               href="${g.createLink(controller: 'basicOnlineStore', action: 'womensTops', params: [])}">TOPS</a>
+                            <a class="dropdown-item"
+                               href="${g.createLink(controller: 'basicOnlineStore', action: 'womensBottoms', params: [])}">BOTTOMS</a>
                         </div>
 
                     </div>
@@ -90,10 +102,14 @@
                                 data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
                             MEN
                         </button>
+
                         <div class="dropdown-menu" aria-labelledby="dropdownMenuButtonMen">
-                            <a class="dropdown-item" href="${g.createLink(controller : 'basicOnlineStore', action : 'mensActiveWear',params : [])}">ACTIVE WEAR</a>
-                            <a class="dropdown-item" href="${g.createLink(controller : 'basicOnlineStore', action : 'mensTops',params : [])}">TOPS</a>
-                            <a class="dropdown-item" href="${g.createLink(controller : 'basicOnlineStore', action : 'mensBottoms',params : [])}">BOTTOMS</a>
+                            <a class="dropdown-item"
+                               href="${g.createLink(controller: 'basicOnlineStore', action: 'mensActiveWear', params: [])}">ACTIVE WEAR</a>
+                            <a class="dropdown-item"
+                               href="${g.createLink(controller: 'basicOnlineStore', action: 'mensTops', params: [])}">TOPS</a>
+                            <a class="dropdown-item"
+                               href="${g.createLink(controller: 'basicOnlineStore', action: 'mensBottoms', params: [])}">BOTTOMS</a>
                         </div>
                     </div>
 
@@ -102,11 +118,16 @@
                                 data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
                             KIDS
                         </button>
+
                         <div class="dropdown-menu" aria-labelledby="dropdownMenuButtonKid">
-                            <a class="dropdown-item" href="${g.createLink(controller : 'basicOnlineStore', action : 'kidsGraphicTees',params : [])}">GRAPHIC TEES</a>
-                            <a class="dropdown-item" href="${g.createLink(controller : 'basicOnlineStore', action : 'kidsTops',params : [])}">TOPS</a>
-                            <a class="dropdown-item" href="${g.createLink(controller : 'basicOnlineStore', action : 'kidsJeans',params : [])}">JEANS</a>
-                            <a class="dropdown-item" href="${g.createLink(controller : 'basicOnlineStore', action : 'kidsDresses',params : [])}">DRESSES</a>
+                            <a class="dropdown-item"
+                               href="${g.createLink(controller: 'basicOnlineStore', action: 'kidsGraphicTees', params: [])}">GRAPHIC TEES</a>
+                            <a class="dropdown-item"
+                               href="${g.createLink(controller: 'basicOnlineStore', action: 'kidsTops', params: [])}">TOPS</a>
+                            <a class="dropdown-item"
+                               href="${g.createLink(controller: 'basicOnlineStore', action: 'kidsJeans', params: [])}">JEANS</a>
+                            <a class="dropdown-item"
+                               href="${g.createLink(controller: 'basicOnlineStore', action: 'kidsDresses', params: [])}">DRESSES</a>
                         </div>
                     </div>
 
@@ -115,10 +136,14 @@
                                 data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
                             OUTERWEAR
                         </button>
+
                         <div class="dropdown-menu" aria-labelledby="dropdownMenuButtonOuterwear">
-                            <a class="dropdown-item" href="${g.createLink(controller : 'basicOnlineStore', action : 'womensCoats',params : [])}">WOMEN'S COATS </a>
-                            <a class="dropdown-item" href="${g.createLink(controller : 'basicOnlineStore', action : 'mensCoats',params : [])}">MEN'S COATS</a>
-                            <a class="dropdown-item" href="${g.createLink(controller : 'basicOnlineStore', action : 'kidsCoats',params : [])}">KID'S COATS</a>
+                            <a class="dropdown-item"
+                               href="${g.createLink(controller: 'basicOnlineStore', action: 'womensCoats', params: [])}">WOMEN'S COATS</a>
+                            <a class="dropdown-item"
+                               href="${g.createLink(controller: 'basicOnlineStore', action: 'mensCoats', params: [])}">MEN'S COATS</a>
+                            <a class="dropdown-item"
+                               href="${g.createLink(controller: 'basicOnlineStore', action: 'kidsCoats', params: [])}">KID'S COATS</a>
                         </div>
                     </div>
 
@@ -127,10 +152,14 @@
                                 data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
                             SHOES
                         </button>
+
                         <div class="dropdown-menu" aria-labelledby="dropdownMenuButtonShoe">
-                            <a class="dropdown-item" href="${g.createLink(controller : 'basicOnlineStore', action : 'womensShoes',params : [])}">WOMEN'S SHOES</a>
-                            <a class="dropdown-item" href="${g.createLink(controller : 'basicOnlineStore', action : 'mensShoes',params : [])}">MEN'S SHOES</a>
-                            <a class="dropdown-item" href="${g.createLink(controller : 'basicOnlineStore', action : 'kidsShoes',params : [])}">KID'S SHOES</a>
+                            <a class="dropdown-item"
+                               href="${g.createLink(controller: 'basicOnlineStore', action: 'womensShoes', params: [])}">WOMEN'S SHOES</a>
+                            <a class="dropdown-item"
+                               href="${g.createLink(controller: 'basicOnlineStore', action: 'mensShoes', params: [])}">MEN'S SHOES</a>
+                            <a class="dropdown-item"
+                               href="${g.createLink(controller: 'basicOnlineStore', action: 'kidsShoes', params: [])}">KID'S SHOES</a>
                         </div>
                     </div>
 
@@ -139,10 +168,14 @@
                                 data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
                             HOME
                         </button>
+
                         <div class="dropdown-menu" aria-labelledby="dropdownMenuButtonHome">
-                            <a class="dropdown-item" href="${g.createLink(controller : 'basicOnlineStore', action : 'bedding',params : [])}">BEDDING</a>
-                            <a class="dropdown-item" href="${g.createLink(controller : 'basicOnlineStore', action : 'decor',params : [])}">DECOR</a>
-                            <a class="dropdown-item" href="${g.createLink(controller : 'basicOnlineStore', action : 'bath',params : [])}">BATH</a>
+                            <a class="dropdown-item"
+                               href="${g.createLink(controller: 'basicOnlineStore', action: 'bedding', params: [])}">BEDDING</a>
+                            <a class="dropdown-item"
+                               href="${g.createLink(controller: 'basicOnlineStore', action: 'decor', params: [])}">DECOR</a>
+                            <a class="dropdown-item"
+                               href="${g.createLink(controller: 'basicOnlineStore', action: 'bath', params: [])}">BATH</a>
                         </div>
                     </div>
                 </ul>
@@ -150,10 +183,27 @@
 
             <div class="navbar-nav">
                 <li class="nav-item border rounded-circle mx-2 search-icon">
-                    <i class="fas fa-search p-2"></i>
+                    <i class="fas fa-search p-2" onclick="$(document).ready(function () {
+                        $('#search').modal('show');
+                    });">
+                    </i>
                 </li>
+
+                <div id="search" class="modal fade" role="dialog">
+                    <div class="modal-dialog" data-dismiss="modal">
+                        <div class="modal-content">
+                            <div class="modal-body">
+                                <p>Normally sites let you search for specific items. Look for a search symbol like this or a bar across the top of the page you can type in.</p>
+                                <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+
                 <li class="nav-item border rounded-circle mx-2 basket-icon">
-                    <a class="fas fa-shopping-basket p-2" href="${g.createLink(controller : 'basicOnlineStore', action : 'shoppingCart',params : [])}"></a>
+                    <a class="fas fa-shopping-basket p-2"
+                       href="${g.createLink(controller: 'basicOnlineStore', action: 'shoppingCart', params: [])}"></a>
                 </li>
             </div>
         </nav>
