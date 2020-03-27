@@ -5,7 +5,6 @@ class Users {
     String lastName
     String emailAddress
     String password
-    boolean placementExam = false
     int placementLevel = 0
     static constraints = {
 
