@@ -19,14 +19,14 @@
 </head>
 
 <body><%--Text displayed--%>
-<p style="margin: 10px;"><h4>Workflow # ?: Title</h4></p>
+<p style="margin: 10px;"><h4>Activity # ${workflow.number}: ${workflow.title}</h4></p>
 <!-- Button trigger modal -->
 <button type="button"  class="btn btn-primary" data-toggle="modal" data-target="#instructionModal">
     Task Instructions
 </button>
 
 <!-- Modal -->
-<div class="modal fade" id="instructionModal" tabindex="-1" role="dialog" aria-labelledby="instructionModalLabel" aria-hidden="true">
+<div class="modal fade" id="instructionModal" tabindex="-1" role="dialog" aria-labelledby="instructionModalLabel">
     <div class="modal-dialog" role="document">
         <div class="modal-content">
             <div class="modal-header">
@@ -36,12 +36,20 @@
                 </button>
             </div>
             <div class="modal-body">
-                <p>Here are the task instructions</p>
+                <p>${workflow.directions}</p>
                 <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
             </div>
         </div>
     </div>
 </div>
+
+
+<!-- Code to have instruction modal open when page loads -->
+<script>$(document).ready(function() {
+    $('#instructionModal').modal('show');
+});</script>
+
+
 
 <!-- Button trigger modal -->
 <button type="button"  class="btn btn-primary" data-toggle="modal" data-target="#solutionModal">
@@ -56,12 +64,20 @@
                 <h5 class="modal-title" id="solutionModalLabel">Solution</h5>
             </div>
             <div class="modal-body">
-                <p>Here are the step by step solutions</p>
+                <p>${workflow.solution}s</p>
                 <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
             </div>
         </div>
     </div>
 </div>
+<br>
+<div style="margin-top:25px;">
+    <iframe src = "storetwo" width = "1280" height = "550">
+
+    </iframe>
+</div>
+
+
 
 </body>
 </html>

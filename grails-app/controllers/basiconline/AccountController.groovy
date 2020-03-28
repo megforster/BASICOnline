@@ -17,10 +17,8 @@ class AccountController {
         def passwrd = params.password //sets a variable named passwrd to have a value passed to it associated with the key password
         def usr = Users.findByEmailAddressAndPassword(email, passwrd) //uses a dynamic finder to search the database for an instance with the
                                                                       // specified variables
-        if(usr!=null&& usr.placementExam==true){
-            render(view: "workflows", model: [usr: usr]) //renders the view users can select workflows from and passes the view the users information
-        }else if(usr!=null&& usr.placementExam==false) {
-            render(view: "placementExam", model: [usr:usr])
+        if(usr!=null) {
+            render(view: "workflows", model: [usr:usr])
         }else{
             render("You either entered an incorrect email or password, or you do not have an account yet!!") //prints text to the screen
         }
@@ -53,11 +51,11 @@ class AccountController {
         def usr = Users.findByEmailAddressAndPassword("-", "guest") //uses a dynamic finder to
                                                                                           // search the database for an instance with
                                                                                           //the specified variables
-        render(view: "placementExam", model: [usr: usr]) //renders the view users can select workflows
+        render(view: "workflows", model: [usr: usr]) //renders the view users can select workflows
                                                          // from and passes the view the users information
     }
 
-    //Displays user's result from the placement exam and updates their account info to reflect they've completed the placement exam and their result
+    /*//Displays user's result from the placement exam and updates their account info to reflect they've completed the placement exam and their result
     def results(){
         def usr = Users.findOrSaveByEmailAddressAndPassword(params.emailAddress, params.password) //finds the current user's account
         usr.setPlacementExam(true)//change the user's placement exam status to true
@@ -66,7 +64,7 @@ class AccountController {
 
         //render(usr.placementExam)
        render(view: "results", model: [usr: usr]) //renders the results view and passes it the user
-    }
+    }*/
 
     def workflows(){
         def usr = Users.findByEmailAddressAndPassword(params.emailAddress, params.password) //finds the current user's account

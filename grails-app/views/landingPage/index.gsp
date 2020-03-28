@@ -45,7 +45,6 @@
 <g:img dir="assets" file="BASICLogo.jpg" />
 
 </body>
-
 <body>
 Cookie value of here for current: <g:cookie name="count" /><BR>
 Cookie value of what will be: ${count2}
