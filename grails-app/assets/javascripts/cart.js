@@ -161,6 +161,7 @@ function addItemToCart(title, price, imageSrc) {
     sessionStorage.setItem("cart", JSON.stringify(saveCart))
 
     sessionStorage.setItem("URI", "http://localhost:63342/WorkingCopy/OnlineStore/Views/ShoppingCart.html")
+    checkIfWf1Done() //See if there is a clean way to get the cart to display before the alert
 }
 
 function updateCartTotal() {
@@ -177,5 +178,21 @@ function updateCartTotal() {
     }
     total = (Math.round(total * 100) / 100).toFixed(2)
     document.getElementsByClassName('cart-total-price')[0].innerText = '$' + total
+}
+
+function checkIfWf1Done() {
+    if(sessionStorage.getItem("cart")!=null){
+        if(sessionStorage.getItem("cart").length>2){
+            alert("Great Job! You Completed the Activity!")
+            //when switch it creates the button, but iFrame can't load the gsp
+            //when placeHolderback there is no element with that id
+            document.getElementById('placeHolderBack').innerHTML = '    <button type ="button" class="btn-purchase">\n' +
+                '        <a href="${g.createLink(controller : \'account\', action : \'workflows\',params : [])}">\n' +
+                '            Select Next Activity\n' +
+                '        </a>\n' +
+                '    </button>';
+        }
+    }
+
 }
 

@@ -37,6 +37,7 @@
         $("#nav-placeholder").replaceWith(data);
     });
 </script>
+
 <section class="container content-section">
     <h2 class="section-header">CART</h2>
     <div class="cart-row">
@@ -52,6 +53,11 @@
         <span class="cart-total-price">$0.00</span>
     </div>
     <button class="btn-purchase" type="button">Purchase</button>
+
+    <div id="switch">
+
+    </div>
+
 </section>
 </body>
 </html>

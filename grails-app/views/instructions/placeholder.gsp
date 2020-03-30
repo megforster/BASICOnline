@@ -10,12 +10,13 @@
     <!-- Bootstrap CDN-->
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css"
           integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
-    <title>BASIC Online Temp Instructions</title> <%--Title for Main Instruction view--%>
+    <title>BASIC Online Activity</title> <%--Title for Main Instruction view--%>
 <asset:link rel="icon" href="BASICLogo.jpg" type="image/x-ico"/> <%--Changes browser tab icon--%>
     <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.3/umd/popper.min.js" integrity="sha384-vFJXuSJphROIrBnz7yo7oB41mKfc8JzQZiCq4NCceLEaO4IHwicKwpJf9c9IpFgh" crossorigin="anonymous"></script>
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta.2/js/bootstrap.min.js" integrity="sha384-alpBpkh1PFOepccYVYDB4do5UnbKysX5WZXm3XxPqe5iKTfUKjNkCk9SaVuEZflJ" crossorigin="anonymous"></script>
     <link rel="stylesheet" href="${resource(dir: 'css', file: 'modal.css')}" type="text/css">
+    <asset:javascript src="cart.js"/>
 </head>
 
 <body><%--Text displayed--%>
@@ -64,18 +65,26 @@
                 <h5 class="modal-title" id="solutionModalLabel">Solution</h5>
             </div>
             <div class="modal-body">
-                <p>${workflow.solution}s</p>
+                <p>${workflow.solution}</p>
                 <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
             </div>
         </div>
     </div>
 </div>
+
+%{--Tried referencing cart.js above--}%
+<div id = "placeHolderBack">
+    <script>console.log("We're here, live, in sunny placeHolderBack!")</script>
+</div>
+
 <br>
 <div style="margin-top:25px;">
     <iframe src = "storetwo" width = "1280" height = "550">
 
     </iframe>
 </div>
+
+
 
 
 

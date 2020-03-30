@@ -5,7 +5,7 @@ class InstructionsController {
     def index() { }
 
     def placeholder(){
-        def placeHolderWorkflow = Workflow.findByNumber(42)
+        def placeHolderWorkflow = Workflow.findByNumber(01)
         render(view: "placeholder", model: [workflow:placeHolderWorkflow])
     }
 
