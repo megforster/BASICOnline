@@ -18,7 +18,7 @@
 <div class="form">
     <forms>
 <p><h4>Welcome Guest!</h4></p> <%--Page header--%>
-    <p>As a reminder, signing in as a guest will not save any of your progress. Quitting and coming back will result in you starting over.</p>
+        <p><h3>As a reminder, signing in as a guest will not save any of your progress. Quitting and coming back will result in you starting over.</h3></p>
 
     <div class="newuser">
         <a href="${g.createLink(controller : 'account', action : 'newUser',params : [])}">

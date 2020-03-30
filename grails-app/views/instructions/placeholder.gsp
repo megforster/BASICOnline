@@ -19,11 +19,12 @@
 </head>
 
 <body><%--Text displayed--%>
-<p style="margin: 10px;"><h4>Activity # ${workflow.number}: ${workflow.title}</h4></p>
+<h4>Activity # ${workflow.number}: ${workflow.title}</h4>
+
 <!-- Button trigger modal -->
-<button type="button"  class="btn btn-primary" data-toggle="modal" data-target="#instructionModal">
-    Task Instructions
-</button>
+<div class = "input-box">
+    <input type="button"  value= "Task Instructions" class="btn btn-primary" data-toggle="modal" data-target="#instructionModal">
+</div>
 
 <!-- Modal -->
 <div class="modal fade" id="instructionModal" tabindex="-1" role="dialog" aria-labelledby="instructionModalLabel">
@@ -52,9 +53,9 @@
 
 
 <!-- Button trigger modal -->
-<button type="button"  class="btn btn-primary" data-toggle="modal" data-target="#solutionModal">
-    Task Solution
-</button>
+<div class = "input-box2">
+<input type="button"  value= "Task Solutions" class="btn btn-primary" data-toggle="modal" data-target="#solutionModal">
+</div>
 
 <!-- Modal -->
 <div class="modal fade" id="solutionModal" tabindex="-1" role="dialog" aria-labelledby="solutionModalLabel" aria-hidden="true">
@@ -73,9 +74,9 @@
 
 <div id = "placeHolderBack" style="visibility: hidden">
     <button type ="button" class="btn-purchase">
-           <a href="${g.createLink(controller : 'account', action : 'workflows',params : [])}">
-               Select Next Activity
-          </a>
+        <a href="${g.createLink(controller : 'account', action : 'workflows',params : [])}">
+            Select Next Activity
+        </a>
     </button>
 </div>
 <script src = "../../assets/workflowCompletion.js">

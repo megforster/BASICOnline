@@ -26,7 +26,7 @@
         <%--Button that brings the user from the results page to their workflow page--%>
             <g:link controller="Account" action="workflows"
                     params="${[emailAddress: usr.emailAddress, password: usr.password]}">
-                <input type="submit" value="Enter Workflows" class="button"/> <%--What makes it a button--%>
+                <input type="submit" value="Enter Activity" class="button"/> <%--What makes it a button--%>
             </g:link>
         </div>
     </forms>

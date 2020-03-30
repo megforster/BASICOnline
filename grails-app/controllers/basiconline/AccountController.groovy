@@ -20,7 +20,7 @@ class AccountController {
         if(usr!=null) {
             render(view: "workflows", model: [usr:usr])
         }else{
-            render("You either entered an incorrect email or password, or you do not have an account yet!!") //prints text to the screen
+            render(view:"incorrectInput") //renders text to the screen
         }
     }
 

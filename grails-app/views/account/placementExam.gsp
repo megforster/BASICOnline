@@ -24,7 +24,7 @@
     <forms>
 <p><h4>Welcome ${usr.firstName}!</h4></p><%--Page header--%>
 
-<p>Please start the workflow below to be assigned a placement level! Placement levels determine which practice workflows you have access to.</p>
+<p>Please start the activity below to be assigned a placement level! Placement levels determine which practice activities you have access to.</p>
 <p>As another note, whatever placement level you wind up in is not a negative refection of your abilities or potential. In fact, this tool was made for users with little experience!</p>
 
 <%--Button to submit placement exam--%>
