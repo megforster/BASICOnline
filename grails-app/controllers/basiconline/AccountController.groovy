@@ -68,7 +68,7 @@ class AccountController {
 
     def workflows(){
         def usr = Users.findByEmailAddressAndPassword(params.emailAddress, params.password) //finds the current user's account
-        render(view: "workflows", model: [firstName: usr.firstName]) //renders the workflows view and passes it the user's first name
+        render(view: "workflows") //renders the workflows view and passes it the user's first name
     }
 
 }

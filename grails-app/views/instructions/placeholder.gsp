@@ -16,7 +16,6 @@
     <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.3/umd/popper.min.js" integrity="sha384-vFJXuSJphROIrBnz7yo7oB41mKfc8JzQZiCq4NCceLEaO4IHwicKwpJf9c9IpFgh" crossorigin="anonymous"></script>
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta.2/js/bootstrap.min.js" integrity="sha384-alpBpkh1PFOepccYVYDB4do5UnbKysX5WZXm3XxPqe5iKTfUKjNkCk9SaVuEZflJ" crossorigin="anonymous"></script>
     <link rel="stylesheet" href="${resource(dir: 'css', file: 'modal.css')}" type="text/css">
-    <asset:javascript src="cart.js"/>
 </head>
 
 <body><%--Text displayed--%>
@@ -72,10 +71,16 @@
     </div>
 </div>
 
-%{--Tried referencing cart.js above--}%
-<div id = "placeHolderBack">
-    <script>console.log("We're here, live, in sunny placeHolderBack!")</script>
+<div id = "placeHolderBack" style="visibility: hidden">
+    <button type ="button" class="btn-purchase">
+           <a href="${g.createLink(controller : 'account', action : 'workflows',params : [])}">
+               Select Next Activity
+          </a>
+    </button>
 </div>
+<script src = "../../assets/workflowCompletion.js">
+
+</script>
 
 <br>
 <div style="margin-top:25px;">

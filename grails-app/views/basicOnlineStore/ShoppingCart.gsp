@@ -54,10 +54,6 @@
     </div>
     <button class="btn-purchase" type="button">Purchase</button>
 
-    <div id="switch">
-
-    </div>
-
 </section>
 </body>
 </html>

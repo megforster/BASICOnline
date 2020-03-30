@@ -13,10 +13,7 @@
 </head>
 
 <body>
-<p>Here will be where users can access their available workflows</p> <%--temporary description of page purpose--%>
-<br>
-<br>
-<p><h4>Welcome back ${firstName}</h4></p><%--Page header--%>
+<p><h4>Time To Get Down To Buisness! Select An Activity</h4></p><%--Page header--%>
 <p>Please select a workflow from below to get started! You can chose a completely new workflow or work on improving your score for one you've already one.</p>
 <g:link controller = "Instructions" action="placeholder">
     <input type="button" value="basiconline.Workflow #1" class="button"/> <%--What makes it a button--%>
