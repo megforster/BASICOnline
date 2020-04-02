@@ -19,7 +19,7 @@
 </head>
 
 <body><%--Text displayed--%>
-<h4>Activity # ${workflow.number}: ${workflow.title}</h4>
+<h4 id = "wf">Activity #${workflow.number}: ${workflow.title}</h4>
 
 <!-- Button trigger modal -->
 <div class = "input-box">

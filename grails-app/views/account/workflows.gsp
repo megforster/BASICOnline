@@ -25,31 +25,31 @@
 
     <div class = "input-box">
         <p>
-            <g:link controller = "Instructions" action="placeholder">
+            <g:link controller = "Instructions" action="placeholder1">
                 <input type="button" value="Activity #1" class="button"/> <%--What makes it a button--%>
             </g:link>
         </p>
 
         <p>
-            <g:link controller = "Instructions" action="placeholder">
+            <g:link controller = "Instructions" action="placeholder2">
                 <input type="button" value="Activity #2" class="button"/> <%--What makes it a button--%>
             </g:link>
         </p>
 
         <p>
-            <g:link controller = "Instructions" action="placeholder">
+            <g:link controller = "Instructions" action="placeholder3">
                 <input type="button" value="Activity #3" class="button"/> <%--What makes it a button--%>
             </g:link>
         </p>
 
         <p>
-            <g:link controller = "Instructions" action="placeholder">
+            <g:link controller = "Instructions" action="placeholder4">
                 <input type="button" value="Activity #4" class="button"/> <%--What makes it a button--%>
             </g:link>
         </p>
 
         <p>
-            <g:link controller = "Instructions" action="placeholder">
+            <g:link controller = "Instructions" action="placeholder5">
                 <input type="button" value="Activity #5" class="button"/> <%--What makes it a button--%>
             </g:link>
         </p>

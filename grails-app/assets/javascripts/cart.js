@@ -125,6 +125,7 @@ function loadCart(){
         updateCartTotal()
     }
 }
+
 function addItemToCart(title, price, imageSrc) {
     console.log("addItemToCart")
     var cartRow = document.createElement('div')

@@ -4,10 +4,27 @@ class InstructionsController {
 
     def index() { }
 
-    def placeholder(){
+    def placeholder1(){
         def placeHolderWorkflow = Workflow.findByNumber(01)
         render(view: "placeholder", model: [workflow:placeHolderWorkflow])
     }
+
+    def placeholder2(){
+        def placeHolderWorkflow = Workflow.findByNumber(02)
+        render(view: "placeholder", model: [workflow:placeHolderWorkflow])
+    }
+  /*  def placeholder3(){
+        def placeHolderWorkflow = Workflow.findByNumber(01)
+        render(view: "placeholder", model: [workflow:placeHolderWorkflow])
+    }
+    def placeholder4(){
+        def placeHolderWorkflow = Workflow.findByNumber(01)
+        render(view: "placeholder", model: [workflow:placeHolderWorkflow])
+    }
+    def placeholder5(){
+        def placeHolderWorkflow = Workflow.findByNumber(01)
+        render(view: "placeholder", model: [workflow:placeHolderWorkflow])
+    }*/
 
     def store(){
        render(view: "test")
