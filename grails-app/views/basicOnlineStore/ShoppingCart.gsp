@@ -55,5 +55,8 @@
     <button class="btn-purchase" type="button">Purchase</button>
 
 </section>
+
+%{--call js function to fill cart items. Display only here--}%
+
 </body>
 </html>

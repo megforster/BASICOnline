@@ -15,7 +15,7 @@ Known Issues In Priority Order
 - Doesn't detect when an item is already in the cart
  */
 
-
+//Use in display part
 function ready() {
     var removeCartItemButtons = document.getElementsByClassName("btn-danger")
     for (var i = 0; i < removeCartItemButtons.length; i++) {
@@ -50,8 +50,11 @@ function ready() {
 //Seems to work may need further testing
 function removeCartItem(event) {
     var buttonClicked = event.target
+    //Removes Visual
     buttonClicked.parentElement.parentElement.remove()
     updateCartTotal()
+
+    //Removes Logic
    console.log("BEFORE\n"+saveCart)
     for(var i = 0; i<saveCart.length;i++){
 
@@ -66,16 +69,21 @@ function removeCartItem(event) {
 
 }
 
+//Clears cart visuals
+function clearCartVisual(){
+    var cartItems = document.getElementsByClassName("cart-items")[0]
+    while(cartItems.hasChildNodes()){
+        cartItems.removeChild(cartItems.firstChild)
+    }
+    updateCartTotal()
+}
 
 function purchaseClicked(){
     console.log("Purchase button was clicked")
-    if(JSON.parse(sessionStorage.getItem("cart")).length>0){
+    if(sessionStorage.getItem("cart")!=null&&JSON.parse(sessionStorage.getItem("cart")).length>0){
         alert("Thank you for your purchase!")
-        var cartItems = document.getElementsByClassName("cart-items")[0]
-        while(cartItems.hasChildNodes()){
-            cartItems.removeChild(cartItems.firstChild)
-        }
-        updateCartTotal()
+        clearCartVisual()
+        //Clears cart logic
         sessionStorage.removeItem("cart")
     }else{
         alert("You don't have anything in the cart to purchase!")
@@ -102,7 +110,6 @@ function addToCartClicked(event) {
     updateCartTotal()
 }
 
-
 function loadCart(){
     if(sessionStorage.getItem("cart")!=null) {
         var cartItems = document.getElementsByClassName("cart-items")[0]
@@ -126,6 +133,8 @@ function loadCart(){
     }
 }
 
+//Separate visuals from car logic
+//Store parameters not whole divs (title, price, imageSrc, quantity)
 function addItemToCart(title, price, imageSrc) {
     console.log("addItemToCart")
     var cartRow = document.createElement('div')
@@ -134,12 +143,12 @@ function addItemToCart(title, price, imageSrc) {
     var cartItemNames = cartItems.getElementsByClassName("cart-item-title")
 
     //This doesn't work whoops
-    for(var i = 0; i<cartItemNames.length;i++){
+   /* for(var i = 0; i<cartItemNames.length;i++){
         if(cartItemNames[i].innerText==title){
             alert("This item is already in your cart")
             return
         }
-    }
+    }*/
     loadCart()
     var cartRowContents = `
         <div class="cart-item cart-column">
