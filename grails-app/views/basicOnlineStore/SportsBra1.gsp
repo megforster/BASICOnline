@@ -16,20 +16,22 @@
 
     <link rel="stylesheet" href="${resource(dir: 'css', file: 'GenericProductStyle.css')}" type="text/css">
 
-    <script src="../js/cart.js" async></script>
+    %{--<script src="../js/cart.js"></script>--}%
+    <asset:javascript src="cart.js"/>
     <link rel="icon" href="../assets/BASIC logo.jpg">
-    <script>
-        function passValues() {
-            var imageSrc = document.getElementsByClassName("shop-item-image")[0].src
-            var productTitle = document.getElementsByClassName("shop-item-title")[0].innerText
-            var productPrice = document.getElementsByClassName("shop-item-price")[0].innerText
-            sessionStorage.setItem("image", imageSrc)
-            sessionStorage.setItem("title", productTitle)
-            sessionStorage.setItem("price", productPrice)
-            sessionStorage.setItem("URI", "http://localhost:8080/basicOnlineStore/WomensActiveWear")
-            return false;
-        }
-    </script>
+%{--    <script>--}%
+%{--        function passValues() {--}%
+%{--            var imageSrc = document.getElementsByClassName("shop-item-image")[0].src--}%
+%{--            var productTitle = document.getElementsByClassName("shop-item-title")[0].innerText--}%
+%{--            var productPrice = document.getElementsByClassName("shop-item-price")[0].innerText--}%
+%{--            addItemToCart2(productTitle, productPrice, imageSrc, 1)--}%
+%{--            // sessionStorage.setItem("image", imageSrc)--}%
+%{--            // sessionStorage.setItem("title", productTitle)--}%
+%{--            // sessionStorage.setItem("price", productPrice)--}%
+%{--            // sessionStorage.setItem("URI", "http://localhost:8080/basicOnlineStore/WomensActiveWear")--}%
+%{--            // return false;--}%
+%{--        }--}%
+%{--    </script>--}%
 
 </head>
 <body>
@@ -74,8 +76,9 @@
             <img src="../assets/StockImages/5stars.png" width="150px">
             <p class = "shop-item-price">$27.30</p>
             <p><b>Brand:</b>DKNY</p>
-            <button type ="button" class="cart shop-item-button">
-                <a href="${g.createLink(controller : 'basicOnlineStore', action : 'shoppingCart',params : [])}" onclick="passValues();">Add to cart</a>
+            <button type ="button" class="cart shop-item-button" onclick="passValues2()">
+                Add to cart
+%{--                <a href="${g.createLink(controller : 'basicOnlineStore', action : 'shoppingCart',params : [])}" onclick="passValues();">Add to cart</a>--}%
             </button>
 
         </div>

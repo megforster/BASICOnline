@@ -55,5 +55,7 @@
     <button class="btn-purchase" type="button">Purchase</button>
 
 </section>
+
+<script>displayCart2()</script>
 </body>
 </html>
