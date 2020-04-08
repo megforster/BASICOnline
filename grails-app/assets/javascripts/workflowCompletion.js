@@ -14,6 +14,7 @@ if(1==num){
     myInverval = window.setInterval(checkIfWf1Done, 1000);
 }else if(2==num){
     console.log("TWO HERE")
+    wf2SetUp()
     myInverval = window.setInterval(checkIfWf2Done, 1000);
 }else{
     console.log("Both failed")
@@ -31,32 +32,30 @@ function checkIfWf1Done() {
 }
 
 function checkIfWf2Done(){
-    wf2SetUp() //Don't think this is properly putting stuff in cart
-    if(sessionStorage.getItem("cart")==null){
-        document.getElementById('placeHolderBack').style.visibility = "visible"
-        sessionStorage.removeItem("cart")
-        window.clearInterval(myInverval);
+    if(sessionStorage.getItem("cart")!=null) {
+        if (sessionStorage.getItem("cart").length < 3) {
+            alert("Great Job! You Completed the Activity!")
+            document.getElementById('placeHolderBack').style.visibility = "visible"
+            sessionStorage.removeItem("cart")
+            window.clearInterval(myInverval);
 
+        }
     }
 }
 
+//Including add to cart clicked adds teh bath set but returns an error on "add to cart clicked" line 51. Not including them adds the t-shirt
 function wf2SetUp(){
-    sessionStorage.setItem("cart", "<div class=\"cart-item cart-column\">\n" +
-        "            <img class=\"cart-item-image\" src=\"http://localhost:8080/assets/StockImages/KidsGraphicTees/Tee1Front.jpeg\" width=\"100\" height=\"100\">\n" +
-        "            <span class=\"cart-item-title\">Epic Threads Love Graphic Tee</span>\n" +
-        "        </div>\n" +
-        "        <span class=\"cart-price cart-column\">$10.00</span>\n" +
-        "        <div class=\"cart-quantity cart-column\">\n" +
-        "            <input class=\"cart-quantity-input\" type=\"number\" value=\"1\">\n" +
-        "            <button class=\" btn-danger\" type=\"button\">Remove</button>\n" +
-        "        </div>,\n" +
-        "        <div class=\"cart-item cart-column\">\n" +
-        "            <img class=\"cart-item-image\" src=\"http://localhost:8080/assets/StockImages/side.jpg\" width=\"100\" height=\"100\">\n" +
-        "            <span class=\"cart-item-title\">Kid's Converse Black</span>\n" +
-        "        </div>\n" +
-        "        <span class=\"cart-price cart-column\">$50.45</span>\n" +
-        "        <div class=\"cart-quantity cart-column\">\n" +
-        "            <input class=\"cart-quantity-input\" type=\"number\" value=\"1\">\n" +
-        "            <button class=\" btn-danger\" type=\"button\">Remove</button>\n" +
-        "        </div>")
+    console.log("Going to add first item")
+    sessionStorage.setItem("image", "../assets/StockImages/bathAll.jpeg")
+    sessionStorage.setItem("title", "Magnolia Bath AccessorySet")
+    sessionStorage.setItem("price", "$92.78")
+    sessionStorage.setItem("URI", "http://localhost:8080/basicOnlineStore/Bath")
+    //addToCartClicked()
+    console.log("Added first item, going to add second")
+    sessionStorage.setItem("image", "../assets/StockImages/KidsGraphicTees/Tee2Front.jpeg")
+    sessionStorage.setItem("title", "Looney Tunes Tweety Graphic Tee")
+    sessionStorage.setItem("price", "$40.00")
+    sessionStorage.setItem("URI", "http://localhost:8080/basicOnlineStore/KidsGraphicTees")
+    //addToCartClicked()
+    console.log("Added second item")
 }
