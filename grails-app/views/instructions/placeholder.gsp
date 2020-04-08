@@ -79,17 +79,15 @@
         </a>
     </button>
 </div>
-<script src = "../../assets/workflowCompletion.js">
-
-</script>
 
 <br>
-<div style="margin-top:25px;">
-    <iframe src = "storetwo" width = "1280" height = "550">
-
+%{--<div style="margin-top:25px;">--}%
+    <iframe src = "storetwo" id = "storeID" width = "1280" height = "550">
     </iframe>
-</div>
+%{--</div>--}%
 
+<script src = "/assets/cart.js"></script>
+<script src = "../../assets/workflowCompletion.js"></script>
 
 
 

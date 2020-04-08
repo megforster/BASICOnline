@@ -1,13 +1,21 @@
-if (document.readyState == "loading") {
-    document.documentURI= sessionStorage.getItem("URI")
-    if(document.readyState=="loading") {
-        document.addEventListener("DOMContentLoaded", ready)
-    }
-}else{
-    ready()
-}
-var tempCart=[]
+const cartListName = "cartList"   // Name of field to store a list of items to add.
+const cartCommand = "cartCommand" // Item to set to identify a "command"
+const commandSetCart = "setCart"  // Value of one command  (this should clear and set cart in one swoop)
+var tempCart = []
 var saveCart = []
+
+// This starts the script going.
+//   I like this idea better than running immediately.  Can run it once entire page is loaded.
+function runCart() {
+    if (document.readyState == "loading") {
+        document.documentURI = sessionStorage.getItem("URI")
+        if (document.readyState == "loading") {
+            document.addEventListener("DOMContentLoaded", ready)
+        }
+    } else {
+        ready()
+    }
+}
 
 /*
 Known Issues In Priority Order
@@ -34,12 +42,26 @@ function ready() {
             console.log("loadingCart becuase of refresh")
             loadCart()
         }else{
-            if(sessionStorage.getItem("URI")=="http://localhost:63342/WorkingCopy/OnlineStore/Views/ShoppingCart.html"){ //Tells if shopping cart icon was clicked
-               console.log('loadingCart becuase shopping cart icon')
+            console.log("DEBUG: URI = " + sessionStorage.getItem("URI"))
+            if(sessionStorage.getItem("URI")=="http://localhost:63342/WorkingCopy/OnlineStore/Views/ShoppingCart.html") { //Tells if shopping cart icon was clicked
+                console.log('loadingCart becuase shopping cart icon')
                 loadCart()
-            }else{
+            }else if (sessionStorage.getItem(cartCommand) === undefined || sessionStorage.getItem(cartCommand) === null) {
                 console.log("adding Item to Cart")
                 addToCartClicked()
+            } else {
+                switch (sessionStorage.getItem(cartCommand)) {
+                    case commandSetCart:
+                        // Set the cart directly (clear and add items from list)
+                        console.log("DEBUG: Cart command: Set Cart")
+                        clearCart()
+                        addMultipleItemsToCart()
+                        break;
+                    default:
+                        console.log("Error.  Unrecognized command sent: " + sessionStorage.getItem(cartCommand))
+                }
+                // Clear the cartCommand (or we'll have a problem next load if it isn't set!)
+                sessionStorage.removeItem(cartCommand)
             }
         }
     }
@@ -66,6 +88,18 @@ function removeCartItem(event) {
 
 }
 
+// Clear the cart
+function clearCart() {
+    let cartItems = document.getElementsByClassName("cart-items")[0]
+    if (cartItems !== undefined) {
+        console.log("DEBUG: Clearing all items from shopping cart document")
+        while (cartItems.hasChildNodes()) {
+            cartItems.removeChild(cartItems.firstChild)
+        }
+    }
+    sessionStorage.removeItem("cart")
+    updateCartTotal()
+}
 
 function purchaseClicked(){
     console.log("Purchase button was clicked")
@@ -93,24 +127,39 @@ function quantityChanged(event) {
 
 }
 
+// This function is invoked if the session was sent a LIST of items
+// rather than a single item.  This usually can happen with an automated call
+// or if a multi-item button were pressed
+function addMultipleItemsToCart() {
+    loadCart()
+    let cartList = JSON.parse(sessionStorage.getItem(cartListName))
+    console.log("DEBUG: Adding " + cartList.length + " items to the cart.")
+    cartList.forEach(item => {
+        console.log("Adding: " + item.title + " Price: " + item.price)
+        addItemToCart(item.title, item.price, item.imageSrc)
+    })
+    updateCartTotal()
+
+    // This URI is used (for whatever reason) to indicate no action is needed.
+    //    Usually tripped when shopping cart itself is loaded
+    sessionStorage.setItem("URI", "http://localhost:63342/WorkingCopy/OnlineStore/Views/ShoppingCart.html")
+}
+
 function addToCartClicked(event) {
     var title = sessionStorage.getItem("title")
     var price = sessionStorage.getItem("price")
     Number(price)
     var imageSrc = sessionStorage.getItem("image")
+    loadCart()
     addItemToCart(title, price, imageSrc)
     updateCartTotal()
 }
-
 
 function loadCart(){
     if(sessionStorage.getItem("cart")!=null) {
         var cartItems = document.getElementsByClassName("cart-items")[0]
         //console.log("HERE")
-        var temp = JSON.parse(sessionStorage.getItem("cart"))
-        for (var i = 0; i < temp.length; i++) {
-            saveCart[i] = temp[i]
-        }
+        saveCart = JSON.parse(sessionStorage.getItem("cart"))
         if(sessionStorage.getItem("cart")!=null){
             tempCart = JSON.parse(sessionStorage.getItem("cart"))
             for(var i = 0; i<tempCart.length; i++){
@@ -127,7 +176,7 @@ function loadCart(){
 }
 
 function addItemToCart(title, price, imageSrc) {
-    console.log("addItemToCart")
+    console.log("DEBUG: addItemToCart: " + title + " Price: $" + price)
     var cartRow = document.createElement('div')
     cartRow.classList.add("cart-row")
     var cartItems = document.getElementsByClassName("cart-items")[0]
@@ -140,7 +189,6 @@ function addItemToCart(title, price, imageSrc) {
             return
         }
     }
-    loadCart()
     var cartRowContents = `
         <div class="cart-item cart-column">
             <img class="cart-item-image" src="${imageSrc}" width="100" height="100">
@@ -165,15 +213,15 @@ function addItemToCart(title, price, imageSrc) {
 }
 
 function updateCartTotal() {
-    var cartItemContainer = document.getElementsByClassName("cart-items")[0]
-    var cartRows = cartItemContainer.getElementsByClassName("cart-row")
-    var total = 0
-    for (var i = 0; i < cartRows.length; i++) {
-        var cartRow = cartRows[i]
-        var priceElement = cartRow.getElementsByClassName("cart-price")[0]
-        var quantityElement = cartRow.getElementsByClassName("cart-quantity-input")[0]
-        var price = parseFloat(priceElement.innerText.replace("$", ""))
-        var quantity = quantityElement.value
+    let cartItemContainer = document.getElementsByClassName("cart-items")[0]
+    let cartRows = cartItemContainer === undefined ? [] : cartItemContainer.getElementsByClassName("cart-row")
+    let total = 0
+    for (let i = 0; i < cartRows.length; i++) {
+        let cartRow = cartRows[i];
+        let priceElement = cartRow.getElementsByClassName("cart-price")[0];
+        let quantityElement = cartRow.getElementsByClassName("cart-quantity-input")[0];
+        let price = parseFloat(priceElement.innerText.replace("$", ""));
+        let quantity = quantityElement.value;
         total = total + (price * quantity)
     }
     total = (Math.round(total * 100) / 100).toFixed(2)

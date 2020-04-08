@@ -16,7 +16,8 @@
 
     <link rel="stylesheet" href="${resource(dir: 'css', file: 'GenericProductStyle.css')}" type="text/css">
 
-    <script src="../js/cart.js" async></script>
+    <asset:javascript src="cart.js"/>
+%{--    <script src="../js/cart.js" async></script>--}%
     <link rel="icon" href="../assets/BASIC logo.jpg">
     <script>
         function passValues() {

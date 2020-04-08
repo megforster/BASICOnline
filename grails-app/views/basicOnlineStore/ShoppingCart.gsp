@@ -55,5 +55,8 @@
     <button class="btn-purchase" type="button">Purchase</button>
 
 </section>
+
+%{--Start the cart script to setting everything up--}%
+<script> runCart() </script>
 </body>
 </html>
