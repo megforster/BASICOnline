@@ -73,12 +73,15 @@
 </div>
 
 <div id = "placeHolderBack" style="visibility: hidden">
-    <button type ="button" class="btn-purchase">
+    <button type ="button">
         <a href="${g.createLink(controller : 'account', action : 'workflows',params : [])}">
             Select Next Activity
         </a>
     </button>
 </div>
+<script src = "../../assets/cart.js">
+
+</script>
 <script src = "../../assets/workflowCompletion.js">
 
 </script>

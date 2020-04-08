@@ -35,7 +35,7 @@ function ready() {
             loadCart()
         }else{
             if(sessionStorage.getItem("URI")=="http://localhost:63342/WorkingCopy/OnlineStore/Views/ShoppingCart.html"){ //Tells if shopping cart icon was clicked
-               console.log('loadingCart becuase shopping cart icon')
+               console.log('loadingCart because shopping cart icon')
                 loadCart()
             }else{
                 console.log("adding Item to Cart")
@@ -64,6 +64,7 @@ function removeCartItem(event) {
         }
     }
     console.log("AFTER\n"+saveCart)
+    console.log("Length of saveCart is not: "+saveCart.length)
     sessionStorage.setItem("cart", JSON.stringify(saveCart))
 
 
@@ -140,7 +141,7 @@ function addItemToCart(title, price, imageSrc) {
     var cartRow = document.createElement('div')
     cartRow.classList.add("cart-row")
     var cartItems = document.getElementsByClassName("cart-items")[0]
-    var cartItemNames = cartItems.getElementsByClassName("cart-item-title")
+   // var cartItemNames = cartItems.getElementsByClassName("cart-item-title")
 
     //This doesn't work whoops
    /* for(var i = 0; i<cartItemNames.length;i++){
@@ -168,7 +169,7 @@ function addItemToCart(title, price, imageSrc) {
 
     saveCart.push(cartRowContents)
 
-    sessionStorage.setItem("cart", JSON.stringify(saveCart))
+    sessionStorage.setItem("cart", JSON.stringify(saveCart))//have to use trim??
 
     sessionStorage.setItem("URI", "http://localhost:63342/WorkingCopy/OnlineStore/Views/ShoppingCart.html")
 }
