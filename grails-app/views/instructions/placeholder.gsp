@@ -54,7 +54,7 @@
 
 <!-- Button trigger modal -->
 <div class = "input-box2">
-<input type="button"  value= "Task Solutions" class="btn btn-primary" data-toggle="modal" data-target="#solutionModal">
+    <input type="button"  value= "Task Solutions" class="btn btn-primary" data-toggle="modal" data-target="#solutionModal">
 </div>
 
 <!-- Modal -->
@@ -73,26 +73,32 @@
 </div>
 
 <div id = "placeHolderBack" style="visibility: hidden">
-    <button type ="button">
+    <button type ="button" class="btn-purchase">
         <a href="${g.createLink(controller : 'account', action : 'workflows',params : [])}">
             Select Next Activity
         </a>
     </button>
 </div>
-<script src = "../../assets/cart.js">
-
-</script>
-<script src = "../../assets/workflowCompletion.js">
-
-</script>
 
 <br>
+%{--
 <div style="margin-top:25px;">
-    <iframe src = "storetwo" width = "1280" height = "550">
+--}%
+<iframe src = "storetwo"  id = "onlinestorexyz" width = "1280" height = "550">
 
-    </iframe>
+</iframe>
+%{--
 </div>
+--}%
 
+<asset:javascript src="cart.js"/>
+%{--<script src = "../../assets/cart.js">--}%
+%{--</script>--}%
+<asset:javascript src="workflowCompletion.js"/>
+%{--<script src = "../../assets/workflowCompletion.js">--}%
+%{--</script>--}%
+</body>
+</html>
 
 
 
