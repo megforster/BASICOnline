@@ -16,9 +16,9 @@
 
     <link rel="stylesheet" href="${resource(dir: 'css', file: 'GenericProductStyle.css')}" type="text/css">
 
-    <script src="../js/cart.js" async></script>
+    <asset:javascript src="cart.js"/>
     <link rel="icon" href="../assets/BASIC logo.jpg">
-    <script>
+    %{--<script>
         function passValues() {
             var imageSrc = document.getElementsByClassName("shop-item-image")[0].src
             var productTitle = document.getElementsByClassName("shop-item-title")[0].innerText
@@ -26,10 +26,10 @@
             sessionStorage.setItem("image", imageSrc)
             sessionStorage.setItem("title", productTitle)
             sessionStorage.setItem("price", productPrice)
-            sessionStorage.setItem("URI", "http://localhost:8080/basicOnlineStore/MensCoats")
+            sessionStorage.setItem("URI", "http://localhost:8080/basicOnlineStore/MensRedCoat")
             return false;
         }
-    </script>
+    </script>--}%
 
 </head>
 <body>
@@ -74,8 +74,12 @@
             <img src="../assets/StockImages/5stars.png" width="150px">
             <p class = "shop-item-price">75.85</p>
             <p><b>Brand:</b>Hawke & Co</p>
-            <button type ="button" class="cart shop-item-button">
-                <a href="${g.createLink(controller : 'basicOnlineStore', action : 'shoppingCart',params : [])}" onclick="passValues();">Add to cart</a>
+            <button type ="button" class="cart shop-item-button" onclick="passValues2()">
+               Add to cart
+                <script>
+                sessionStorage.setItem("URI", "http://localhost:8080/basicOnlineStore/MensRedCoat")
+            </script>
+                %{--<a href="${g.createLink(controller : 'basicOnlineStore', action : 'shoppingCart',params : [])}" onclick="passValues();">Add to cart</a>--}%
             </button>
 
         </div>

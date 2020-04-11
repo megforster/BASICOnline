@@ -110,6 +110,8 @@
                                href="${g.createLink(controller: 'basicOnlineStore', action: 'mensTops', params: [])}">TOPS</a>
                             <a class="dropdown-item"
                                href="${g.createLink(controller: 'basicOnlineStore', action: 'mensBottoms', params: [])}">BOTTOMS</a>
+                            <a class="dropdown-item"
+                               href="${g.createLink(controller: 'basicOnlineStore', action: 'mensCoats', params: [])}">OUTERWEAR</a>
                         </div>
                     </div>
 
