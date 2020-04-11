@@ -13,14 +13,18 @@ class InstructionsController {
         def placeHolderWorkflow = Workflow.findByNumber(02)
         render(view: "placeholder", model: [workflow:placeHolderWorkflow])
     }
-  /*  def placeholder3(){
-        def placeHolderWorkflow = Workflow.findByNumber(01)
+
+   def placeholder3(){
+        def placeHolderWorkflow = Workflow.findByNumber(03)
         render(view: "placeholder", model: [workflow:placeHolderWorkflow])
     }
     def placeholder4(){
-        def placeHolderWorkflow = Workflow.findByNumber(01)
+        def placeHolderWorkflow = Workflow.findByNumber(04)
         render(view: "placeholder", model: [workflow:placeHolderWorkflow])
     }
+
+
+    /*
     def placeholder5(){
         def placeHolderWorkflow = Workflow.findByNumber(01)
         render(view: "placeholder", model: [workflow:placeHolderWorkflow])

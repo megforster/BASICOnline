@@ -64,7 +64,7 @@ function displayCart2(theDocument) {
     let cart = loadCart2()
 
     console.log("DEBUG: Displaying contents of cart...")
-    cart.forEach(item => console.log("Title: " + item.title + " Price:" + item.price))
+    cart.forEach(item => console.log("Title: " + item.title + " Price:" + item.price +"Quantity:"+item.quantity))
 
     // Create a visual display of each cart item
     let cartItems = theDocument.getElementsByClassName("cart-items")[0]
@@ -91,11 +91,37 @@ function displayCart2(theDocument) {
         cartRow.innerHTML = cartRowContents
         cartRow.getElementsByClassName('btn-danger')[0].addEventListener('click',
             (event) => removeCartItem2(event, title))
-        cartRow.getElementsByClassName('cart-quantity-input')[0].addEventListener('change', quantityChanged)
+        cartRow.getElementsByClassName('cart-quantity-input')[0].addEventListener('change', (event) => quantityChanged(event, title))
         cartItems.append(cartRow)
     }
 
-    updateCartTotal2()
+
+}
+
+//Changes quantity visual
+function quantityChanged(event, title) {
+    var input = event.target
+    if (isNaN(input.value) || input.value <= 0) {
+        input.value = 1
+    }
+    updateCartTotal()
+    let cart = loadCart2()
+    //console.log(cart[0])
+    for(let i = 0; i<cart.length;i++){
+        var itemTitle = cart[i].title
+        //console.log("title: "+title)
+        //console.log("itemTitle: "+itemTitle)
+        //console.log(typeof itemTitle)
+        if (itemTitle.localeCompare(title)==0){
+            //console.log("They be equal!!")
+            cart[i].quantity = input.value
+            //console.log("Updated item qauntity: "+cart[i].quantity)
+            removeCartItem2(event, title)
+            addItemToCart2(title, cart[i].price, cart[i].imageSrc, cart[i].quantity)
+            displayCart2()
+        }
+    }
+    //console.log(loadCart2())
 }
 
 function updateCartTotal2() {
@@ -193,15 +219,7 @@ function purchaseClicked(){
 
 }
 
-function quantityChanged(event) {
-    var input = event.target
-    if (isNaN(input.value) || input.value <= 0) {
-        input.value = 1
-    }
 
-    updateCartTotal()
-
-}
 
 function addToCartClicked(event) {
     var title = sessionStorage.getItem("title")

@@ -52,7 +52,7 @@
             <div id="carouselExampleControls" class="carousel slide" data-ride="carousel">
                 <div class="carousel-inner">
                     <div class="carousel-item active">
-                        <img src="../assets/StockImages/WomensActiveWear/SportsBra3Front.jpegFront.jpeg"  class="d-block w-100" alt="First Slide">
+                        <img src="../assets/StockImages/WomensActiveWear/SportsBra3Front.jpeg"  class="d-block w-100" alt="First Slide">
                     </div>
                     <div class="carousel-item">
                         <img src="../assets/StockImages/WomensActiveWear/SportsBra3Back.jpeg"  class="d-block w-100" alt="Second Slide">
