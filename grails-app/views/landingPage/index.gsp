@@ -45,9 +45,10 @@
 <g:img dir="assets" file="BASICLogo.jpg" />
 
 </body>
-<body>
-Cookie value of here for current: <g:cookie name="count" /><BR>
-Cookie value of what will be: ${count2}
-</body>
+%{--<body>--}%
+%{--Statments used to help debug when creating cookie functions to track user movement through pages--}%
+%{--Cookie value of here for current: <g:cookie name="count" /><BR>--}%
+%{--Cookie value of what will be: ${count2}--}%
+%{--</body>--}%
 
 </html>
