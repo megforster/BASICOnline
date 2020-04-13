@@ -84,7 +84,7 @@
 %{--
 <div style="margin-top:25px;">
 --}%
-<iframe src = "storetwo"  id = "onlinestorexyz" width = "1280" height = "550">
+<iframe src = "store"  id = "onlinestorexyz" width = "1280" height = "550">
 
 </iframe>
 %{--

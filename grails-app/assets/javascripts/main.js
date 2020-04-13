@@ -1,5 +1,4 @@
-/* First Slider */
-
+//Controls behavior for banner slider
 $('.slider-one')
     .not(".slick-intialized")
     .slick({
@@ -10,15 +9,13 @@ $('.slider-one')
         nextArrow: ".site-slider .slider-btn .next",
     });
 
-/* Second Slider */
+//Controls behavior for featured items slider
 $('.slider-two')
     .not(".slick-intialized")
     .slick({
         prevArrow: ".site-slider-two .prev",
         nextArrow: ".site-slider-two .next",
         slidesToShow: 5,
-        slidesToScroll:1,
-        autoplaySpeed:3000
+        slidesToScroll: 1,
+        autoplaySpeed: 3000
     });
-
-

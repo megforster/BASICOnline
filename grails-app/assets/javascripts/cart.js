@@ -1,7 +1,9 @@
 const cartName = "cart2";
 var tempCart=[]
 var saveCart = []
+runCart()
 
+//Makes sure everything is loaded properly before cart behavior begins
 function runCart() {
     if (document.readyState == "loading") {
         document.documentURI = sessionStorage.getItem("URI")
@@ -11,65 +13,86 @@ function runCart() {
     } else {
         ready()
     }
-    showCart2()
+}
+
+//Sets up button listeners for cart and loads the cart correctly
+function ready() {
+    var removeCartItemButtons = document.getElementsByClassName("btn-danger")
+    for (var i = 0; i < removeCartItemButtons.length; i++) {
+        var button = removeCartItemButtons[i]
+        button.addEventListener('click', removeCartItem)
+    }
+    var quantityInputs = document.getElementsByClassName("cart-quantity-input")
+    for (var i = 0; i < quantityInputs.length; i++) {
+        var input = quantityInputs[i]
+        input.addEventListener("change", quantityChanged)
+    }
+
+    if(sessionStorage.length>0){
+        if(performance.navigation.type==1){
+            //console.log("loadingCart becuase of refresh")
+            loadCart()
+        }else{
+            if(sessionStorage.getItem("URI")=="http://localhost:63342/WorkingCopy/OnlineStore/Views/ShoppingCart.html"){
+                //console.log('loadingCart becuase shopping cart icon')
+                loadCart()
+            }else{
+                //console.log("adding Item to Cart")
+                addToCartClicked()
+            }
+        }
+    }
+    document.getElementsByClassName("btn-purchase")[0].addEventListener('click', purchaseClicked)
 }
 
 // Called by a shopping page to add an item from the list to the cart
-function passValues2() {
+function passValues() {
     let imageSrc = document.getElementsByClassName("shop-item-image")[0].src
     let productTitle = document.getElementsByClassName("shop-item-title")[0].innerText
     let productPrice = document.getElementsByClassName("shop-item-price")[0].innerText
-    addItemToCart2(productTitle, productPrice, imageSrc, 1)
+    addItemToCart(productTitle, productPrice, imageSrc, 1)
 }
 
 // Add the given item and quantity to the cart.
-// If the item already exists, increase the quantity by the given amount  (UNIMPLEMENTED RIGHT NOW)
-function addItemToCart2(title, price, imageSrc, quantity) {
+// TO DO: If the item already exists, increase the quantity by the given amount
+function addItemToCart(title, price, imageSrc, quantity) {
     if (quantity === undefined) quantity = 1
 
-    console.log("DEBUG: In addItemToCart")
-
-    // Load the cart and add the new item to the cart and store it back in
-    let cart = loadCart2()
+   // console.log("DEBUG: In addItemToCart")
+    let cart = loadCart()
     if (typeof price === 'string') {
-        console.log("DEBUG:  Pre-Price = " + price)
+        //console.log("DEBUG:  Pre-Price = " + price)
         price = Number(parseFloat(price.replace("$", "")))
-        console.log("DEBUG:  Post-price = " + price)
+        //console.log("DEBUG:  Post-price = " + price)
     }
     cart.push({title:title, price:price, imageSrc:imageSrc, quantity:quantity})
     sessionStorage.setItem(cartName, JSON.stringify(cart))
 }
 
 // Grab the cart from the SessionStorage and return as a list of items in a cart
-function loadCart2() {
-    let items = sessionStorage.getItem(cartName)   // Get cart as a JSON file (if present)
+function loadCart() {
+    let items = sessionStorage.getItem(cartName)
     if (items != null) {
-        let cart = JSON.parse(items)   // Parse the items from the cart
+        let cart = JSON.parse(items)
         return cart
     } else {
-        return []   // Empty cart
+        return []
     }
 }
 
 // Empty the cart out completely
-function emptyCart2() {
+function emptyCart() {
     sessionStorage.removeItem(cartName)
 }
 
 // Take the contents of the cart and generate a view of it on the given document
-function displayCart2(theDocument) {
+function displayCart(theDocument) {
     if (theDocument == undefined) theDocument = document
-
-    // For now, it is just going to load the cart contents and dump them to console.log
-    let cart = loadCart2()
-
-    console.log("DEBUG: Displaying contents of cart...")
+    let cart = loadCart()
+    //console.log("DEBUG: Displaying contents of cart...")
     cart.forEach(item => console.log("Title: " + item.title + " Price:" + item.price +"Quantity:"+item.quantity))
-
-    // Create a visual display of each cart item
     let cartItems = theDocument.getElementsByClassName("cart-items")[0]
     for (let i = 0; i < cart.length; i++) {
-        // Create the div row to hold the details of this item
         let cartRow = theDocument.createElement('div')
         cartRow.classList.add("cart-row")
         let item = cart[i]
@@ -90,12 +113,10 @@ function displayCart2(theDocument) {
         </div>`
         cartRow.innerHTML = cartRowContents
         cartRow.getElementsByClassName('btn-danger')[0].addEventListener('click',
-            (event) => removeCartItem2(event, title))
+            (event) => removeCartItem(event, title))
         cartRow.getElementsByClassName('cart-quantity-input')[0].addEventListener('change', (event) => quantityChanged(event, title))
         cartItems.append(cartRow)
     }
-
-
 }
 
 //Changes quantity visual
@@ -105,7 +126,7 @@ function quantityChanged(event, title) {
         input.value = 1
     }
     updateCartTotal()
-    let cart = loadCart2()
+    let cart = loadCart()
     //console.log(cart[0])
     for(let i = 0; i<cart.length;i++){
         var itemTitle = cart[i].title
@@ -116,93 +137,35 @@ function quantityChanged(event, title) {
             //console.log("They be equal!!")
             cart[i].quantity = input.value
             //console.log("Updated item qauntity: "+cart[i].quantity)
-            removeCartItem2(event, title)
-            addItemToCart2(title, cart[i].price, cart[i].imageSrc, cart[i].quantity)
-            displayCart2()
+            removeCartItem(event, title)
+            addItemToCart(title, cart[i].price, cart[i].imageSrc, cart[i].quantity)
+            displayCart()
         }
     }
     //console.log(loadCart2())
 }
 
-function updateCartTotal2() {
+//Updates the displayed cart total
+function updateCartTotal() {
     let total = 0
-    let cart = loadCart2()
+    let cart = loadCart()
     cart.forEach(item => total += item.price * item.quantity)
     total = (Math.round(total * 100) / 100).toFixed(2)
     document.getElementsByClassName('cart-total-price')[0].innerText = '$' + total
 }
 
-//Seems to work may need further testing
-//   Event: The event that triggered the action
-//   title: Is the title of the item to remove
-function removeCartItem2(event, title) {
+//Removes an item for the cart if remove item button has been clicked
+function removeCartItem(event, title) {
     let buttonClicked = event.target
-    let cart = loadCart2()
+    let cart = loadCart()
     cart = cart.filter(item => item.title !== title)
     sessionStorage.setItem(cartName, JSON.stringify(cart))
 
     buttonClicked.parentElement.parentElement.remove()
-    updateCartTotal2()  // Currently, not displaying cart total
-}
-
-/*
-Known Issues In Priority Order
-- Cart doesnt save amount of an item so reloading defaults to 1
-- Doesn't detect when an item is already in the cart
- */
-
-
-function ready() {
-    var removeCartItemButtons = document.getElementsByClassName("btn-danger")
-    for (var i = 0; i < removeCartItemButtons.length; i++) {
-        var button = removeCartItemButtons[i]
-        button.addEventListener('click', removeCartItem)
-    }
-    var quantityInputs = document.getElementsByClassName("cart-quantity-input")
-    for (var i = 0; i < quantityInputs.length; i++) {
-        var input = quantityInputs[i]
-        input.addEventListener("change", quantityChanged)
-    }
-
-    //add item after button click but before navigation
-    if(sessionStorage.length>0){
-        if(performance.navigation.type==1){ //so refreshing the page doesn't add another item
-            console.log("loadingCart becuase of refresh")
-            loadCart()
-        }else{
-            if(sessionStorage.getItem("URI")=="http://localhost:63342/WorkingCopy/OnlineStore/Views/ShoppingCart.html"){ //Tells if shopping cart icon was clicked
-                console.log('loadingCart becuase shopping cart icon')
-                loadCart()
-            }else{
-                console.log("adding Item to Cart")
-                addToCartClicked()
-            }
-        }
-    }
-
-    document.getElementsByClassName("btn-purchase")[0].addEventListener('click', purchaseClicked)
-}
-
-//Seems to work may need further testing
-function removeCartItem(event) {
-    var buttonClicked = event.target
-    buttonClicked.parentElement.parentElement.remove()
     updateCartTotal()
-    console.log("BEFORE\n"+saveCart)
-    for(var i = 0; i<saveCart.length;i++){
-
-        if(JSON.stringify(buttonClicked.parentElement.parentElement.innerHTML)==JSON.stringify(saveCart[i])){
-            //console.log("Found identical item, so splice is incorrect if this does not work")
-            saveCart.splice(i,1)
-        }
-    }
-    console.log("AFTER\n"+saveCart)
-    sessionStorage.setItem("cart", JSON.stringify(saveCart))
-
-
 }
 
-
+//Clears the cart and displays a message when purchase button clicked
 function purchaseClicked(){
     console.log("Purchase button was clicked")
     if(JSON.parse(sessionStorage.getItem("cart")).length>0){
@@ -219,8 +182,8 @@ function purchaseClicked(){
 
 }
 
-
-
+//Sets up item to be added to cart when add to cart button clicked
+//??Is this still used?
 function addToCartClicked(event) {
     var title = sessionStorage.getItem("title")
     var price = sessionStorage.getItem("price")
@@ -231,7 +194,40 @@ function addToCartClicked(event) {
 }
 
 
-function loadCart(){
+//Below is most likely unneeded, left in for now for testing
+/*
+Known Issues In Priority Order
+- Cart doesnt save amount of an item so reloading defaults to 1
+- Doesn't detect when an item is already in the cart
+ */
+
+
+
+
+/*//Seems to work may need further testing
+function removeCartItem(event) {
+    var buttonClicked = event.target
+    buttonClicked.parentElement.parentElement.remove()
+    updateCartTotal()
+    console.log("BEFORE\n"+saveCart)
+    for(var i = 0; i<saveCart.length;i++){
+
+        if(JSON.stringify(buttonClicked.parentElement.parentElement.innerHTML)==JSON.stringify(saveCart[i])){
+            //console.log("Found identical item, so splice is incorrect if this does not work")
+            saveCart.splice(i,1)
+        }
+    }
+    console.log("AFTER\n"+saveCart)
+    sessionStorage.setItem("cart", JSON.stringify(saveCart))
+
+
+}*/
+
+
+
+
+
+/*function loadCart(){
     if(sessionStorage.getItem("cart")!=null) {
         var cartItems = document.getElementsByClassName("cart-items")[0]
         //console.log("HERE")
@@ -252,9 +248,9 @@ function loadCart(){
         }
         updateCartTotal()
     }
-}
+}*/
 
-function addItemToCart(title, price, imageSrc, theDocument) {
+/*function addItemToCart(title, price, imageSrc, theDocument) {
     if (theDocument == undefined) theDocument = document   // Use the current document if not passed
 
     console.log("addItemToCart")
@@ -291,8 +287,9 @@ function addItemToCart(title, price, imageSrc, theDocument) {
     sessionStorage.setItem("cart", JSON.stringify(saveCart))
 
     sessionStorage.setItem("URI", "http://localhost:63342/WorkingCopy/OnlineStore/Views/ShoppingCart.html")
-}
+}*/
 
+/*
 function updateCartTotal() {
     var cartItemContainer = document.getElementsByClassName("cart-items")[0]
     var cartRows = cartItemContainer.getElementsByClassName("cart-row")
@@ -307,4 +304,4 @@ function updateCartTotal() {
     }
     total = (Math.round(total * 100) / 100).toFixed(2)
     document.getElementsByClassName('cart-total-price')[0].innerText = '$' + total
-}
+}*/

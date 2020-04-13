@@ -2,6 +2,7 @@ package basiconline
 
 class UrlMappings {
 
+    //Controls BASIC Online pathing format
     static mappings = {
         "/$controller/$action?/$id?(.$format)?"{
             constraints {

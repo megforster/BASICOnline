@@ -2,60 +2,64 @@ package basiconline
 
 class AccountController {
 
-    def index() { } //default action that comes with every controller
-    def logIn(){ //does not have logic, but is used to get to the logIn view
+    //Every controller should have an index action even if it is blank
+    def index() {
 
     }
 
-    def newUser(){ //does not have logic, but is used to get to the newUser view
+    //Every view should have an action in its controller, even if it's blank
+    def logIn(){
+
+    }
+
+    //Every view should have an action in its controller, even if it's blank
+    def newUser(){
 
     }
 
     //Logic that handles associating the user with an existing account
     def submit(){
-        def email = params.emailAddress //sets a variable named email to have a value passed to it associated with the key emailAddress
-        def passwrd = params.password //sets a variable named passwrd to have a value passed to it associated with the key password
-        def usr = Users.findByEmailAddressAndPassword(email, passwrd) //uses a dynamic finder to search the database for an instance with the
-                                                                      // specified variables
+        def email = params.emailAddress
+        def passwrd = params.password
+        def usr = Users.findByEmailAddressAndPassword(email, passwrd)
         if(usr!=null) {
             render(view: "workflows", model: [usr:usr])
         }else{
-            render(view:"incorrectInput") //renders text to the screen
+            render(view:"incorrectInput")
         }
     }
 
     //Logic that handles creating a new account and saving it in the directory
     def create(){
-        def email = params.emailAddress //sets a variable named email to have a value passed to it associated with the key emailAddress
-        if(Users.findByEmailAddress(email)!=null){ //uses a dynamic finder to search the database for an instance with the specified variables
+        def email = params.emailAddress
+        if(Users.findByEmailAddress(email)!=null){
             render(view:"alreadyExists")
         }else{
-            def user = new Users(params) //create an instance in the database and populates it with passed parameters
-            user.save() //saves the instance created
-            render(view:"newUserLogIn") //renders text ons screen
+            def user = new Users(params)
+            user.save()
+            render(view:"newUserLogIn")
         }
     }
 
     //Lists out all users in the database
     def list(){
-        def list = Users.list() //creates a variable set to every instance in the Users database
-        [userList:list] //list out every instance
+        def list = Users.list()
+        [userList:list]
     }
 
-    def guestView(){ //does not have logic, but is used to get to the guestView view
+    //Every view should have an action in its controller, even if it's blank
+    def guestView(){
 
     }
 
     //Logic handles logging a user in as a guest using a default guest account auto-populated into the database
     def guestUsr(){
-        def usr = Users.findByEmailAddressAndPassword("-", "guest") //uses a dynamic finder to
-                                                                                          // search the database for an instance with
-                                                                                          //the specified variables
-        render(view: "workflows", model: [usr: usr]) //renders the view users can select workflows
-                                                         // from and passes the view the users information
+        def usr = Users.findByEmailAddressAndPassword("-", "guest")
+        render(view: "workflows", model: [usr: usr])
     }
 
-    /*//Displays user's result from the placement exam and updates their account info to reflect they've completed the placement exam and their result
+    /* Not currently in use as the placement exam was backlogged
+    //Logic for displaying placement exam results
     def results(){
         def usr = Users.findOrSaveByEmailAddressAndPassword(params.emailAddress, params.password) //finds the current user's account
         usr.setPlacementExam(true)//change the user's placement exam status to true
@@ -66,9 +70,10 @@ class AccountController {
        render(view: "results", model: [usr: usr]) //renders the results view and passes it the user
     }*/
 
+    //Logic for displaying workflow selection
     def workflows(){
-        def usr = Users.findByEmailAddressAndPassword(params.emailAddress, params.password) //finds the current user's account
-        render(view: "workflows") //renders the workflows view and passes it the user's first name
+        def usr = Users.findByEmailAddressAndPassword(params.emailAddress, params.password)
+        render(view: "workflows")
     }
 
 }

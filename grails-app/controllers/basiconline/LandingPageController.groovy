@@ -1,11 +1,9 @@
 package basiconline
 
-import javax.servlet.http.Cookie
-
 class LandingPageController {
 
+    //Cookie code for BASIC Online landing page
     def index() {
-        //cookie stuff
         println("In index")
         def valueString = request.getCookie("count")
         def value = 0
@@ -19,10 +17,11 @@ class LandingPageController {
         [
                 count2: valueString
         ]
-    } //default action that comes with every controller
+    }
 
+    //Renders BASIC Online landing page
     def goToLandingPage() {
-        render(view: "index") //renders the specified view
+        render(view: "index")
     }
 }
 

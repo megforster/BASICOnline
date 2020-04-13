@@ -74,7 +74,7 @@
             <img src="../assets/StockImages/5stars.png" width="150px">
             <p class = "shop-item-price">75.85</p>
             <p><b>Brand:</b>Hawke & Co</p>
-            <button type ="button" class="cart shop-item-button" onclick="passValues2()">
+            <button type ="button" class="cart shop-item-button" onclick="passValues()">
                Add to cart
                 <script>
                 sessionStorage.setItem("URI", "http://localhost:8080/basicOnlineStore/MensRedCoat")

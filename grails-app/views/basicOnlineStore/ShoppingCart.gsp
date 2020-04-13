@@ -56,6 +56,6 @@
 
 </section>
 
-<script>displayCart2()</script>
+<script>displayCart()</script>
 </body>
 </html>

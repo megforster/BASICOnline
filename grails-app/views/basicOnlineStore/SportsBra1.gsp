@@ -71,7 +71,7 @@
             <img src="../assets/StockImages/5stars.png" width="150px">
             <p class = "shop-item-price">$27.30</p>
             <p><b>Brand:</b>DKNY</p>
-            <button type ="button" class="cart shop-item-button" onclick="passValues2()">
+            <button type ="button" class="cart shop-item-button" onclick="passValues()">
                 Add to cart
                 %{--                <a href="${g.createLink(controller : 'basicOnlineStore', action : 'shoppingCart',params : [])}" onclick="passValues();">Add to cart</a>--}%
             </button>
