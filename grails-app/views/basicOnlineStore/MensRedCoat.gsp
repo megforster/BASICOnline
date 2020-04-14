@@ -1,4 +1,5 @@
 %{--Men's Hawke and Co. Coat product page--}%
+<!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
@@ -31,7 +32,9 @@
         $("#nav-placeholder").replaceWith(data);
     });
 </script>
-
+<script>
+    sessionStorage.setItem("URI", "http://localhost:8080/basicOnlineStore/MensRedCoat")
+</script>
 <div class="containerProduct">
     <div class="row">
         <div class="col-md-5">
@@ -70,9 +73,6 @@
             <p><b>Brand:</b>Hawke & Co</p>
             <button type="button" class="cart shop-item-button" onclick="passValues()">
                 Add to cart
-                <script>
-                    sessionStorage.setItem("URI", "http://localhost:8080/basicOnlineStore/MensRedCoat")
-                </script>
             </button>
 
         </div>

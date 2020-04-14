@@ -1,4 +1,5 @@
 %{--All women's coats products page--}%
+<!DOCTYPE html>
 <html lang="en">
 <head>
     <title>Women's Coats</title>

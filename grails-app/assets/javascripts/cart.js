@@ -28,7 +28,7 @@ function ready() {
         input.addEventListener("change", quantityChanged)
     }
 
-    if(sessionStorage.length>0){
+    if(sessionStorage.getItem("cartName")!=null){
         if(performance.navigation.type==1){
             //console.log("loadingCart becuase of refresh")
             loadCart()
@@ -82,6 +82,7 @@ function loadCart() {
 
 // Empty the cart out completely
 function emptyCart() {
+    console.log("Emptying cart")
     sessionStorage.removeItem(cartName)
 }
 
@@ -106,7 +107,7 @@ function displayCart(theDocument) {
             <img class="cart-item-image" src="${imageSrc}" width="100" height="100">
             <span class="cart-item-title">${title}</span>
         </div>
-        <span class="cart-price cart-column">${price}</span>
+        <span class="cart-price cart-column">$${price}</span>
         <div class="cart-quantity cart-column">
             <input class="cart-quantity-input" type="number" value="${quantity}">
             <button class=" btn-danger" type="button">Remove</button>
@@ -116,6 +117,7 @@ function displayCart(theDocument) {
             (event) => removeCartItem(event, title))
         cartRow.getElementsByClassName('cart-quantity-input')[0].addEventListener('change', (event) => quantityChanged(event, title))
         cartItems.append(cartRow)
+        updateCartTotal()
     }
 }
 

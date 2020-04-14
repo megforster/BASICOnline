@@ -1,4 +1,5 @@
 %{--All women's shoes products page--}%
+<!DOCTYPE html>
 <html lang="en">
 <head>
     <title>Women's Shoes</title>

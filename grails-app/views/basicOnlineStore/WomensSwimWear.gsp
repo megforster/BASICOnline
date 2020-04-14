@@ -1,4 +1,5 @@
 %{--All women's swimwear products page--}%
+<!DOCTYPE html>
 <html lang="en">
 <head>
     <title>Women's Swimwear</title>

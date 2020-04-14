@@ -1,4 +1,5 @@
 %{--All kid's jeans products page--}%
+<!DOCTYPE html>
 <html lang="en">
 <head>
     <title>Kid's Jeans</title>

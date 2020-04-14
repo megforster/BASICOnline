@@ -1,4 +1,5 @@
 %{--All men's active wear products page--}%
+<!DOCTYPE html>
 <html lang="en">
 <head>
     <title>Men's Active Wear</title>

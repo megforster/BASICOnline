@@ -1,4 +1,5 @@
 %{--One of three kid's graphic tee product page--}%
+<!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
@@ -15,20 +16,8 @@
             integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6"
             crossorigin="anonymous"></script>
     <link rel="stylesheet" href="${resource(dir: 'css', file: 'GenericProductStyle.css')}" type="text/css">
-    <script src="../js/cart.js" async></script>
+    <asset:javascript src="cart.js"/>
     <link rel="icon" href="../assets/BASIC logo.jpg">
-    <script>
-        function passValues() {
-            var imageSrc = document.getElementsByClassName("shop-item-image")[0].src
-            var productTitle = document.getElementsByClassName("shop-item-title")[0].innerText
-            var productPrice = document.getElementsByClassName("shop-item-price")[0].innerText
-            sessionStorage.setItem("image", imageSrc)
-            sessionStorage.setItem("title", productTitle)
-            sessionStorage.setItem("price", productPrice)
-            sessionStorage.setItem("URI", "http://localhost:8080/basicOnlineStore/KidsGraphicTees")
-            return false;
-        }
-    </script>
 
 </head>
 
@@ -82,11 +71,8 @@
             <p class="shop-item-price">$10.00</p>
 
             <p><b>Brand:</b>Epic Threads</p>
-            <button type="button" class="cart shop-item-button">
-                <a href="${g.createLink(controller: 'basicOnlineStore', action: 'shoppingCart', params: [])}"
-                   onclick="passValues()">
-                    Add to Cart
-                </a>
+            <button type="button" class="cart shop-item-button" onclick="passValues()">
+                Add to cart
             </button>
         </div>
     </div>

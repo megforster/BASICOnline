@@ -1,4 +1,5 @@
 %{--All bedding products page--}%
+<!DOCTYPE html>
 <html lang="en">
 <head>
     <title>Bedding</title>

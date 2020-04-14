@@ -1,4 +1,5 @@
 %{--All bath products page--}%
+<!DOCTYPE html>
 <html lang="en">
 <head>
     <title>Bath</title>

@@ -1,4 +1,5 @@
 %{--All decor products page--}%
+<!DOCTYPE html>
 <html lang="en">
 <head>
     <title>Decor</title>

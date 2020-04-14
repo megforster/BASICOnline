@@ -1,4 +1,5 @@
 %{--All men's bottoms products page--}%
+<!DOCTYPE html>
 <html lang="en">
 <head>
     <title>Men's Bottoms</title>

@@ -60,6 +60,10 @@ function checkIfWf1Done() {
             document.getElementById('placeHolderBack').style.visibility = "visible"
             sessionStorage.removeItem("URI")
             window.clearInterval(myInterval);
+            for (var i = 0; i < itemsInCart.length; i++) {
+                item = itemsInCart[i]
+                console.log(item)
+            }
         }
     }
 }
@@ -84,6 +88,7 @@ function wf3SetUp() {
     emptyCart()
     addItemToCart("Love Graphic Tee", 10, "http://localhost:8080/assets/StockImages/KidsGraphicTees/Tee1Front.jpeg")
     addItemToCart("Love Graphic Tee B", 15, "http://localhost:8080/assets/StockImages/KidsGraphicTees/Tee1Front.jpeg")
+    updateCartTotal()
 }
 
 //Checks online store to see if activity 3 has been completed
@@ -106,12 +111,12 @@ function wf4SetUp() {
 //Not working, trying to figure out how to get quanity changes to save to item
 //Checks online store to see if activity 4 has been completed
 function checkIfWf4Done() {
-    //console.log("-------Checking if 4 done-------")
+    console.log("-------Checking if 4 done-------")
     let itemsInCart = loadCart()
     for (var i = 0; i < itemsInCart.length; i++) {
         item = itemsInCart[i]
         //console.log("CHECKING"+item)
-        //console.log(item.quantity)
+        console.log(item.quantity)
         if (item.quantity == 1) {
             alert("Great Job! You Completed the Activity!")
             document.getElementById('placeHolderBack').style.visibility = "visible"
@@ -126,13 +131,45 @@ function wf5SetUp() {
     addItemToCart("Yogalicious Leggings", 39.95, "http://localhost:8080/assets/StockImages/leggings1.jpg", 5);
     addItemToCart("Champion Sports Bra", 24.00, "http://localhost:8080/assets/StockImages/WomensActiveWear/SportsBra3Front.jpeg", 1)
     addItemToCart("Kid's Converse Sneakers", 50.45, "http://localhost:8080/assets/StockImages/side.jpg", 1)
-
+    let itemsInCart = loadCart()
+    for(let i = 0; i<loadCart().length; i++){
+        console.log(itemsInCart[i])
+    }
 }
 
 //Checks online store to see if activity 5 has been completed
 function checkIfWf5Done() {
-//Check if cart has specific items with specific quantities
-//Create a shopping cart that looks like this: 2 Yogalicious Leggings, 1 Hawk and Co Coat, 2 pairs of kid's Converse, and 1 Magnolia Bath Set
+    let itemsInCart = loadCart()
+    let correctCart = []
+    for (var i = 0; i < itemsInCart.length; i++) {
+        item = itemsInCart[i]
+        console.log(item)
+        if(item.title.localeCompare("Yogalicious Leggings")==0){
+            if(item.quantity==2){
+                correctCart[0] = 1;
+            }
+        }else if(item.title.localeCompare("Kid's Converse Sneakers")==0){
+            if(item.quantity==2){
+                correctCart[1] = 1;
+            }
+        }else if(item.title.localeCompare("Magnolia Bath Accessory Set")==0){
+            if(item.quantity==1){
+                correctCart[2] = 1;
+            }
+
+        }else if(item.title.localeCompare("Hawke and Co. Red Coat")==0){
+            if(item.quantity==1){
+                correctCart[3] = 1;
+            }
+        }else{
+
+        }
+    }
+    if(correctCart.length==4){
+        alert("Great Job! You Completed the Activity!")
+        document.getElementById('placeHolderBack').style.visibility = "visible"
+        window.clearInterval(myInterval);
+    }
 }
 
 

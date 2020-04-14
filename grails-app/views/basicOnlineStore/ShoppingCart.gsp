@@ -1,4 +1,5 @@
 %{--Shopping cart page--}%
+<!DOCTYPE html>
 <html lang="en">
 <head>
     <title>Your Cart</title>

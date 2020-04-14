@@ -30,12 +30,12 @@ class InstructionsController {
         def activityInfo = Workflow.findByNumber(04)
         render(view: "activities", model: [workflow: activityInfo])
     }
-    /*
+
     //Renders activity view with workflow #5 information
     def activity5(){
         def activityInfo = Workflow.findByNumber(05)
         render(view: "activities", model: [workflow:activityInfo])
-    }*/
+    }
 
     //Renders the online store landing page
     def store() {
