@@ -1,3 +1,4 @@
+%{--All women's active wear products page--}%
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -5,15 +6,8 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale = 1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-
-    <!-- Bootstrap CDN-->
-   %{-- <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css"
-          integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">--}%
     <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" rel="stylesheet">
-
-    <!-- Font Awesome CDN -->
     <script src="https://kit.fontawesome.com/4e611744ca.js" crossorigin="anonymous"></script>
-
     <script src="https://code.jquery.com/jquery-3.4.1.slim.min.js"
             integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n"
             crossorigin="anonymous"></script>
@@ -27,6 +21,7 @@
     <link rel="icon" href="../assets/BASIC logo.jpg">
 
 </head>
+
 <body>
 <div id="nav-placeholder">
 
@@ -40,17 +35,26 @@
 </script>
 
 <figure style="margin-left:20px; width:280px; display: inline-block;">
-    <a href="${g.createLink(controller : 'basicOnlineStore', action : 'sportsBraOne',params : [])}" style = "text-decoration: none; color:black;"><img src="../assets/StockImages/WomensActiveWear/SportsBra1Front.jpeg" alt="Product_sportsbra" hspace="40" width="200"><figcaption style="text-align: center">DKNY Sports Bra</figcaption></a>
+    <a href="${g.createLink(controller: 'basicOnlineStore', action: 'sportsBraOne', params: [])}"
+       style="text-decoration: none; color:black;"><img
+            src="../assets/StockImages/WomensActiveWear/SportsBra1Front.jpeg" alt="Product_sportsbra" hspace="40"
+            width="200"><figcaption style="text-align: center">DKNY Sports Bra</figcaption></a>
 
 </figure>
 
 <figure style="margin-left:20px; width:280px;  display: inline-block;">
-    <a href="${g.createLink(controller : 'basicOnlineStore', action : 'sportsBraTwo',params : [])}" style = "text-decoration: none; color:black;"><img src="../assets/StockImages/WomensActiveWear/SportsBra2Front.jpeg" alt="Product_sportsbra" hspace="40" width="200"><figcaption style="text-align: center">DKNY Sports Bra</figcaption></a>
+    <a href="${g.createLink(controller: 'basicOnlineStore', action: 'sportsBraTwo', params: [])}"
+       style="text-decoration: none; color:black;"><img
+            src="../assets/StockImages/WomensActiveWear/SportsBra2Front.jpeg" alt="Product_sportsbra" hspace="40"
+            width="200"><figcaption style="text-align: center">DKNY Sports Bra</figcaption></a>
 
 </figure>
 
 <figure style="margin-left:20px; width:280px;  display: inline-block;">
-    <a href="${g.createLink(controller : 'basicOnlineStore', action : 'sportsBraThree',params : [])}" style = "text-decoration: none; color:black;"><img src="../assets/StockImages/WomensActiveWear/SportsBra3Front.jpeg" alt="Product_sportsbra" hspace="40" width="200"><figcaption style="text-align: center">DKNY Sports Bra</figcaption></a>
+    <a href="${g.createLink(controller: 'basicOnlineStore', action: 'sportsBraThree', params: [])}"
+       style="text-decoration: none; color:black;"><img
+            src="../assets/StockImages/WomensActiveWear/SportsBra3Front.jpeg" alt="Product_sportsbra" hspace="40"
+            width="200"><figcaption style="text-align: center">DKNY Sports Bra</figcaption></a>
 
 </figure>
 </body>

@@ -1,3 +1,4 @@
+%{--Page displayed when there is no view associated with the path--}%
 <!doctype html>
 <html>
     <head>

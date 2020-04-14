@@ -5,11 +5,12 @@
   Time: 8:47 PM
 --%>
 
+%{--Page displayed when user decides to create a new account--}%
 <%@ page contentType="text/html;charset=UTF-8" %>
 <html>
 <head>
-    <title>Create New Account</title> <%--Changes browser tab text--%>
-<asset:link rel="icon" href="BASICLogo.jpg" type="image/x-ico"/> <%--Changes browser tab icon--%>
+    <title>Create New Account</title>
+    <asset:link rel="icon" href="BASICLogo.jpg" type="image/x-ico"/>
 
     <link href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet">
     <link rel="stylesheet" href="${resource(dir: 'css', file: 'newuser.css')}" type="text/css">
@@ -45,18 +46,15 @@
 
             <div class="input-box">
 
-                <%--The submit button goes in the form block so it can send the information typed into the fields (its in the same scope as the info)--%>
-                <g:actionSubmit value="Create"/> <%--Creates a submit button and sends
-                                                          the parameters listed to the "submit" action the form is associated with--%>
+                <g:actionSubmit value="Create"/>
             </div>
         </g:form>
 
     </forms>
 </div>
 
-<%--Button to send users back to the initial landing --%>
-<g:link controller="landingPage" action="goToLandingPage"><%--Will be changed latter--%>
-    <input type="button" value="Home" class="button"/> <%--What makes it a button--%>
+<g:link controller="landingPage" action="goToLandingPage">
+    <input type="button" value="Home" class="button"/>
 </g:link>
 
 </body>

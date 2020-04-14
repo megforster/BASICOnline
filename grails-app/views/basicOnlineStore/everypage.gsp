@@ -1,18 +1,10 @@
+%{--Header navigation for every online store page--}%
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <!-- Bootstrap CDN-->
-    <!--<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css"
-          integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">-->
     <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" rel="stylesheet">
-
-    <!-- Font Awesome CDN -->
-
     <script src="https://kit.fontawesome.com/4e611744ca.js" crossorigin="anonymous"></script>
-
-    <!-- Custom Stylesheet -->
     <link rel="stylesheet" href="${resource(dir: 'css', file: 'header.css')}" type="text/css">
-
 </head>
 
 <body>
@@ -44,7 +36,6 @@
                 <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
             </div>
         </div>
-
     </div>
     </div>
 
@@ -59,7 +50,7 @@
             </div>
         </div>
     </div>
-    <!--MODAL END-->
+
     </p>
     </div>
     </div>
@@ -201,7 +192,6 @@
                         </div>
                     </div>
                 </div>
-
 
                 <li class="nav-item border rounded-circle mx-2 basket-icon">
                     <a class="fas fa-shopping-basket p-2"

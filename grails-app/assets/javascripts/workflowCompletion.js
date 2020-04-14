@@ -125,14 +125,14 @@ function wf5SetUp() {
     emptyCart()
     addItemToCart("Yogalicious Leggings", 39.95, "http://localhost:8080/assets/StockImages/leggings1.jpg", 5);
     addItemToCart("Champion Sports Bra", 24.00, "http://localhost:8080/assets/StockImages/WomensActiveWear/SportsBra3Front.jpeg", 1)
-    addItemToCart("Kid's Converse Sneakers", 50.45, "http://localhost:8080/assets/StockImages/side.jpg", 2)
+    addItemToCart("Kid's Converse Sneakers", 50.45, "http://localhost:8080/assets/StockImages/side.jpg", 1)
 
 }
 
 //Checks online store to see if activity 5 has been completed
 function checkIfWf5Done() {
 //Check if cart has specific items with specific quantities
-//Want one pair of leggings, no sports bra, 2 pairs of sneakers, a mens red coat, and a childs graphic tee
+//Create a shopping cart that looks like this: 2 Yogalicious Leggings, 1 Hawk and Co Coat, 2 pairs of kid's Converse, and 1 Magnolia Bath Set
 }
 
 

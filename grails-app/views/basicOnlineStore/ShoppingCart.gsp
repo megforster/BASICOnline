@@ -1,18 +1,12 @@
+%{--Shopping cart page--}%
 <html lang="en">
 <head>
     <title>Your Cart</title>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale = 1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-
-    <!-- Bootstrap CDN-->
-    %{--<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css"
-          integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">--}%
     <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" rel="stylesheet">
-
-    <!-- Font Awesome CDN -->
     <script src="https://kit.fontawesome.com/4e611744ca.js" crossorigin="anonymous"></script>
-
     <script src="https://code.jquery.com/jquery-3.4.1.slim.min.js"
             integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n"
             crossorigin="anonymous"></script>
@@ -26,6 +20,7 @@
     <link rel="stylesheet" href="${resource(dir: 'css', file: 'cart.css')}" type="text/css">
     <link rel="icon" href="../assets/BASIC logo.jpg">
 </head>
+
 <body>
 <div id="nav-placeholder">
 
@@ -40,14 +35,17 @@
 
 <section class="container content-section">
     <h2 class="section-header">CART</h2>
+
     <div class="cart-row">
         <span class="cart-item cart-header cart-column">Item</span>
         <span class="cart-price cart-header cart-column">Price</span>
         <span class="cart-quantity cart-header cart-column">Quantity</span>
     </div>
+
     <div class="cart-items">
 
     </div>
+
     <div class="cart-total">
         <strong class="cart-total-title">Total</strong>
         <span class="cart-total-price">$0.00</span>
