@@ -32,5 +32,29 @@
         $("#nav-placeholder").replaceWith(data);
     });
 </script>
+
+<figure style="margin-left:20px; width:280px; display: inline-block;">
+    <a href="${g.createLink(controller: 'basicOnlineStore', action: 'womensCoatOne', params: [])}"
+       style="text-decoration: none; color:black;"><img
+            src="../assets/StockImages/WomensCoat1Front.jpeg" alt="Product_coat" hspace="40"
+            width="200"><figcaption style="text-align: center">GUESS Double-Breasted Skirted Coat</figcaption></a>
+
+</figure>
+
+<figure style="margin-left:20px; width:280px;  display: inline-block;">
+    <a href="${g.createLink(controller: 'basicOnlineStore', action: 'womensCoatTwo', params: [])}"
+       style="text-decoration: none; color:black;"><img
+            src="../assets/StockImages/WomensCoat2Front.jpeg" alt="Product_coat" hspace="40"
+            width="200"><figcaption style="text-align: center">Cole Haan Box- Quilted Down Puffer Coat</figcaption></a>
+
+</figure>
+
+<figure style="margin-left:20px; width:280px;  display: inline-block;">
+    <a href="${g.createLink(controller: 'basicOnlineStore', action: 'womensCoatThree', params: [])}"
+       style="text-decoration: none; color:black;"><img
+            src="../assets/StockImages/WomensCoat3Front.jpeg" alt="Product_sportsbra" hspace="40"
+            width="200"><figcaption style="text-align: center">HFX Fur-Lined, Water-Resistant Jacket</figcaption></a>
+
+</figure>
 </body>
 </html>

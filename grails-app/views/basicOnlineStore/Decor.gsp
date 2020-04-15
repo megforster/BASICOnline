@@ -32,5 +32,30 @@
         $("#nav-placeholder").replaceWith(data);
     });
 </script>
+
+<figure style="margin-left:20px; width:280px; display: inline-block;">
+    <a href="${g.createLink(controller: 'basicOnlineStore', action: 'decor1', params: [])}"
+       style="text-decoration: none; color:black;"><img
+            src="../assets/StockImages/Decor11.jpeg" alt="Product_couch" hspace="40"
+            width="200"><figcaption style="text-align: center">Braylei Fabric Chaise</figcaption></a>
+
+</figure>
+
+<figure style="margin-left:20px; width:280px;  display: inline-block;">
+    <a href="${g.createLink(controller: 'basicOnlineStore', action: 'decor2', params: [])}"
+       style="text-decoration: none; color:black;"><img
+            src="../assets/StockImages/Decor2.jpeg" alt="Product_lamp" hspace="40"
+            width="200"><figcaption style="text-align: center">Lumisource Salon Contemporary Floor Lamp</figcaption></a>
+
+</figure>
+
+<figure style="margin-left:20px; width:280px;  display: inline-block;">
+    <a href="${g.createLink(controller: 'basicOnlineStore', action: 'decor3', params: [])}"
+       style="text-decoration: none; color:black;"><img
+            src="../assets/StockImages/Decor3.jpeg" alt="Product_tree" hspace="40"
+            width="200"><figcaption style="text-align: center">Nearly Natural 6' Fiddle Leaf Fig Tree</figcaption></a>
+
+</figure>
+
 </body>
 </html>

@@ -82,14 +82,14 @@
                         <img src="../assets/FeaturedItems/Sheets.jpeg" alt="Product 4"
                              style="width:300px;height:400px;">
                     </a>
-                    <span class="border site-btn btn-span">Shop Sheets</span>
+                    <span class="border site-btn btn-span">Bedding</span>
                 </div>
 
                 <div class="col-md-2 product pt-md-5 pt-4">
                     <a href="${g.createLink(controller: 'basicOnlineStore', action: 'womensCoats', params: [])}">
                         <img src="../assets/FeaturedItems/Coat.jpeg" alt="Product 5" style="width:350px;height:400px;">
                     </a>
-                    <span class="border site-btn btn-span">Winter Coats</span>
+                    <span class="border site-btn btn-span">Women's Coats</span>
                 </div>
 
                 <div class="col-md-2 product pt-md-5 pt-4">

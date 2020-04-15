@@ -41,6 +41,16 @@
                                                             alt="Product_coat" hspace="40" width="200"><figcaption
                 style="text-align: center">Hawke and Co Coat</figcaption></a>
     </figure>
+
+    <figure style="margin-left:20px; width:280px; display: inline-block;">
+        <img src="../assets/StockImages/OutOfStock.jpeg" alt="Product_OutOfStock" hspace="40" width="200"><figcaption
+            style="text-align: center">Alfani Color Blocked Full Zip Jacket</figcaption></a>
+    </figure>
+
+    <figure style="margin-left:20px; width:280px; display: inline-block;">
+        <img src="../assets/StockImages/OutOfStock.jpeg" alt="Product_OutOfStock" hspace="40" width="200"><figcaption
+                style="text-align: center">Nautica Men's Melton Overcoat</figcaption></a>
+    </figure>
 </div>
 </body>
 </html>

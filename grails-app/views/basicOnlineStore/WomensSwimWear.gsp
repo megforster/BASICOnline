@@ -33,6 +33,26 @@
     });
 </script>
 
-<h1>Women's Swim Wear</h1>
+<figure style="margin-left:20px; width:280px; display: inline-block;">
+  <img src="../assets/StockImages/OutOfStock.jpeg" alt="Product_OutOfStock" hspace="40"
+            width="200"><figcaption style="text-align: center">Bar III Printed One-Piece Monokini Swimsuit</figcaption></a>
+
+</figure>
+
+<figure style="margin-left:20px; width:280px;  display: inline-block;">
+    <a href="${g.createLink(controller: 'basicOnlineStore', action: 'womensSwimOne', params: [])}"
+       style="text-decoration: none; color:black;"><img
+            src="../assets/StockImages/WomensSwim1Front.jpeg" alt="Product_coat" hspace="40"
+            width="200"><figcaption style="text-align: center">Michael Kors Printed Logo Ring Shirred Two-Piece</figcaption></a>
+
+</figure>
+
+<figure style="margin-left:20px; width:280px;  display: inline-block;">
+    <a href="${g.createLink(controller: 'basicOnlineStore', action: 'womensSwimTwo', params: [])}"
+       style="text-decoration: none; color:black;"><img
+            src="../assets/StockImages/WomensSwim2Front.jpeg" alt="Product_sportsbra" hspace="40"
+            width="200"><figcaption style="text-align: center">WeWoreWhat Solid Danielle One-Piece</figcaption></a>
+
+</figure>
 </body>
 </html>

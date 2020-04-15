@@ -22,6 +22,10 @@ class BasicOnlineStoreController {
         render(view:"KidsJeans")
     }
 
+    def kidsSwimWear(){
+        render(view:"KidsSwimWear")
+    }
+
     //Renders bath page
     def bath(){
         render(view: "Bath")
@@ -39,7 +43,20 @@ class BasicOnlineStoreController {
 
     //Renders decour page
     def decor(){
-        render(view: "Decour")
+        render(view: "Decor")
+    }
+
+    def decor1(){
+        render(view:"Decor1")
+    }
+
+    def decor2(){
+        render(view:"Decor2")
+
+    }
+
+    def decor3(){
+        render(view:"Decor3")
     }
 
     //Renders graphic tee item product page
@@ -97,6 +114,18 @@ class BasicOnlineStoreController {
         render(view: "MensBottoms")
     }
 
+    def mensBottomsOne(){
+        render(view:"MensPants1")
+    }
+
+    def mensBottomsTwo(){
+        render(view:"MensPants2")
+    }
+
+    def mensBottomsThree(){
+        render(view:"MensPants3")
+    }
+
     //Renders men's coats page
     def mensCoats(){
         render(view: "MensCoats")
@@ -112,9 +141,49 @@ class BasicOnlineStoreController {
         render(view: "MensShoes")
     }
 
+    def mensShoesOne(){
+        render(view:"MensShoes1")
+    }
+
+    def mensShoesTwo(){
+        render(view:"MensShoes2")
+    }
+
     //Render men's tops page
     def mensTops(){
         render(view: "MensTops")
+    }
+
+    def mensTopsOne(){
+        render(view:"MensTops1")
+    }
+
+    def mensTopsTwo(){
+        render(view:"MensTops2")
+    }
+
+    def mensTopsThree(){
+        render(view:"MensTops3")
+    }
+
+    def mensSwimWear(){
+        render(view:"MensSwimWear")
+    }
+
+    def mensSwimOne(){
+        render(view:"MensSwim1")
+    }
+
+    def mensSwimTwo(){
+        render(view:"MensSwim2")
+    }
+
+    def mensSwimThree(){
+        render(view:"MensSwim3")
+    }
+
+    def mensShorts(){
+        render(view:"MensShorts")
     }
 
     //Renders shopping cart page
@@ -157,6 +226,42 @@ class BasicOnlineStoreController {
         render(view: "WomensLeggings")
     }
 
+    def womensCoatOne(){
+        render(view:"WomensCoatOne")
+    }
+
+    def womensCoatTwo(){
+        render(view:"WomensCoatTwo")
+    }
+
+    def womensCoatThree(){
+        render(view:"WomensCoatThree")
+    }
+
+    def womensSwimOne(){
+        render(view:"WomensSwim1")
+    }
+
+    def womensSwimTwo(){
+        render(view:"WomensSwim2")
+    }
+
+    def womensTopOne(){
+        render(view:"WomensTop1")
+    }
+
+    def womensTopTwo(){
+        render(view:"WomensTop2")
+    }
+
+    def womensTopThree(){
+        render(view:"WomensTop3")
+    }
+
+    def womensDressPants(){
+        render(view:"WomensDressPants")
+    }
+
     //Renders women's  shoes page
     def womensShoes(){
         render(view: "WomensShoes")
@@ -170,6 +275,10 @@ class BasicOnlineStoreController {
     //Renders header navigation menu
     def header(){
         render(view: "everypage")
+    }
+
+    def beddingSet(){
+        render(view:"BeddingSet")
     }
 
 }

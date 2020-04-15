@@ -42,6 +42,17 @@
                 style="text-align: center">Magnolia Bathroom Set</figcaption></a>
     </figure>
 
+    <figure style="margin-left:20px; width:275px; display: inline-block;">
+        <img src="../assets/StockImages/OutOfStock.jpeg" alt="Product_OutOfStock"
+                                                            hspace="40" width="200"><figcaption
+                style="text-align: center">Charter Club English Garden Cotton 300-Thread Count Robe</figcaption></a>
+    </figure>
+
+    <figure style="margin-left:20px; width:275px; display: inline-block;">
+        <img src="../assets/StockImages/OutOfStock.jpeg" alt="Product_OutOfStock" hspace="40" width="200"><figcaption
+                style="text-align: center">Utica Essential Cotton Towel Collection</figcaption></a>
+    </figure>
+
 </div>
 </body>
 </html>

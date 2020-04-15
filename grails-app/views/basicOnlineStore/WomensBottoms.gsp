@@ -37,9 +37,19 @@
 
     <figure style="margin-left:20px; width:280px; display: inline-block;">
         <a href="${g.createLink(controller: 'basicOnlineStore', action: 'womensLeggings', params: [])}"
-           style="text-decoration: none; color:black;"><img src="../assets/StockImages/leggings1.jpg"
-                                                            alt="Product_leggings" hspace="40" width="200"><figcaption
+           style="text-decoration: none; color:black;"><img src="../assets/StockImages/leggings1.jpg" alt="Product_leggings" hspace="40" width="200"><figcaption
                 style="text-align: center">Yogalicious Leggings</figcaption></a>
+    </figure>
+
+    <figure style="margin-left:20px; width:280px; display: inline-block;">
+        <img src="../assets/StockImages/OutOfStock.jpeg" alt="Product_OutOfStock" hspace="40" width="200"><figcaption
+                style="text-align: center">Style & Co Curvy Cuffed Capri Jeans</figcaption>
+    </figure>
+
+    <figure style="margin-left:20px; width:280px; display: inline-block;">
+        <a href="${g.createLink(controller: 'basicOnlineStore', action: 'womensDressPants', params: [])}"
+           style="text-decoration: none; color:black;"><img src="../assets/StockImages/WomensDressPantsFront.jpeg" alt="Product_dessPants" hspace="40" width="200"><figcaption
+                style="text-align: center">JM Collection Dress Pants</figcaption></a>
     </figure>
 
 </div>

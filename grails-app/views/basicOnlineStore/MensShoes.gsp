@@ -32,5 +32,28 @@
         $("#nav-placeholder").replaceWith(data);
     });
 </script>
+
+<figure style="margin-left:20px; width:280px; display: inline-block;">
+    <a href="${g.createLink(controller: 'basicOnlineStore', action: 'mensShoesOne', params: [])}"
+       style="text-decoration: none; color:black;"><img
+            src="../assets/StockImages/MensShoes1Front.jpeg" alt="Product_MensShoes" hspace="40"
+            width="200"><figcaption style="text-align: center">Levi's Ethan Canvas II Sneakers</figcaption></a>
+
+</figure>
+
+<figure style="margin-left:20px; width:280px;  display: inline-block;">
+    <img src="../assets/StockImages/OutOfStock.jpeg" alt="Product_OutOfStock" hspace="40"
+            width="200"><figcaption style="text-align: center">Timberland 6" Waterproof Basic Boots</figcaption></a>
+
+</figure>
+
+<figure style="margin-left:20px; width:280px;  display: inline-block;">
+    <a href="${g.createLink(controller: 'basicOnlineStore', action: 'mensShoesTwo', params: [])}"
+       style="text-decoration: none; color:black;"><img
+            src="../assets/StockImages/MensShoes2Front.jpeg" alt="Product_MensShoes" hspace="40"
+            width="200"><figcaption style="text-align: center">Clarks Whiddon Step Loafers</figcaption></a>
+
+</figure>
+
 </body>
 </html>

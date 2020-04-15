@@ -32,5 +32,29 @@
         $("#nav-placeholder").replaceWith(data);
     });
 </script>
+
+<figure style="margin-left:20px; width:280px; display: inline-block;">
+    <a href="${g.createLink(controller: 'basicOnlineStore', action: 'mensBottomsOne', params: [])}"
+       style="text-decoration: none; color:black;"><img
+            src="../assets/StockImages/MensPants1Front.jpeg" alt="Product_sportsbra" hspace="40"
+            width="200"><figcaption style="text-align: center">Perry Ellis Dress Pants</figcaption></a>
+
+</figure>
+
+<figure style="margin-left:20px; width:280px;  display: inline-block;">
+    <a href="${g.createLink(controller: 'basicOnlineStore', action: 'mensBottomsTwo', params: [])}"
+       style="text-decoration: none; color:black;"><img
+            src="../assets/StockImages/MensPants2Front.jpeg" alt="Product_sportsbra" hspace="40"
+            width="200"><figcaption style="text-align: center">Levi's Chino Pants</figcaption></a>
+
+</figure>
+
+<figure style="margin-left:20px; width:280px;  display: inline-block;">
+    <a href="${g.createLink(controller: 'basicOnlineStore', action: 'mensBottomsThree', params: [])}"
+       style="text-decoration: none; color:black;"><img
+            src="../assets/StockImages/MensPants3Front.jpeg" alt="Product_sportsbra" hspace="40"
+            width="200"><figcaption style="text-align: center">Dockers Khaki Stretch Pants</figcaption></a>
+
+</figure>
 </body>
 </html>
