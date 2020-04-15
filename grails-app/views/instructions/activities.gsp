@@ -42,7 +42,6 @@
                     <span aria-hidden="true">&times;</span>
                 </button>
             </div>
-
             <div class="modal-body">
                 <p>${workflow.directions}</p>
                 <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
@@ -77,13 +76,14 @@
 </div>
 
 <div id="placeHolderBack" style="visibility: hidden">
-    <button type="button" class="btn-purchase">
-        <a href="${g.createLink(controller: 'account', action: 'workflows', params: [])}">
-            Select Next Activity
-        </a>
-    </button>
+    <a href="${g.createLink(controller: 'account', action: 'workflows', params: [])}">
+        <div class="btn-purchase">
+            <input type="button"
+            <g:actionSubmit value="Select Next Activity"/>
+        </input>
+        </div>
+    </a>
 </div>
-
 <br>
 
 <iframe src="store" id="onlinestorexyz" width="1280" height="550">
