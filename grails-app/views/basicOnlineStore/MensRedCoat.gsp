@@ -75,6 +75,8 @@
                 Add to cart
             </button>
 
+            <div id="snackbar">Item added to cart!</div>
+
         </div>
     </div>
 </div>

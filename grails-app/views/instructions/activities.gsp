@@ -86,7 +86,7 @@
 </div>
 <br>
 
-<iframe src="store" id="onlinestorexyz" width="1280" height="550">
+<iframe src="store" id="onlinestorexyz" width="1280" height="550" style = "padding-top: 20px; border:none" >
 
 </iframe>
 

@@ -32,5 +32,26 @@
         $("#nav-placeholder").replaceWith(data);
     });
 </script>
+
+<figure style="margin-left:20px; width:280px; display: inline-block;">
+    <img src="../assets/StockImages/OutOfStock.jpeg" alt="Product_OutOfStock" hspace="40"
+            width="200"><figcaption style="text-align: center">Champion Banded Bottom Pants</figcaption></a>
+
+</figure>
+
+<figure style="margin-left:20px; width:280px;  display: inline-block;">
+    <a href="${g.createLink(controller: 'basicOnlineStore', action: 'mensShorts', params: [])}"
+       style="text-decoration: none; color:black;"><img
+            src="../assets/StockImages/MensShortsFront.jpeg" alt="Product_MensShorts" hspace="40"
+            width="200"><figcaption style="text-align: center">Champion 10" Shorts</figcaption></a>
+
+</figure>
+
+<figure style="margin-left:20px; width:280px;  display: inline-block;">
+    <img src="../assets/StockImages/OutOfStock.jpeg" alt="Product_OutOfStock" hspace="40"
+            width="200"><figcaption style="text-align: center">Under Armour Sleeveless Compression Tank </figcaption>
+
+</figure>
+
 </body>
 </html>

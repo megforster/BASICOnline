@@ -2,7 +2,7 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <title>Women's Shoes</title>
+    <title>Women's Coats</title>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale = 1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
@@ -32,5 +32,17 @@
         $("#nav-placeholder").replaceWith(data);
     });
 </script>
+
+<figure style="margin-left:20px; width:280px; display: inline-block;">
+    <img src="../assets/StockImages/OutOfStock.jpeg" alt="Product_OutOfStock" hspace="40"
+            width="200"><figcaption style="text-align: center">Steve Madden Daisy Pumps</figcaption></a>
+
+</figure>
+
+<figure style="margin-left:20px; width:280px;  display: inline-block;">
+   <img src="../assets/StockImages/OutOfStock.jpeg" alt="Product_OutOfStock" hspace="40"
+            width="200"><figcaption style="text-align: center">Born Iwa Flat Sandals</figcaption></a>
+
+</figure>
 </body>
 </html>

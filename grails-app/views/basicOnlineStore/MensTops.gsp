@@ -32,5 +32,30 @@
         $("#nav-placeholder").replaceWith(data);
     });
 </script>
+
+<figure style="margin-left:20px; width:280px; display: inline-block;">
+    <a href="${g.createLink(controller: 'basicOnlineStore', action: 'mensTopsOne', params: [])}"
+       style="text-decoration: none; color:black;"><img
+            src="../assets/StockImages/MensTops1Front.jpeg" alt="Product_sportsbra" hspace="40"
+            width="200"><figcaption style="text-align: center">PGA Tour Ombré Fade Golf Polo</figcaption></a>
+
+</figure>
+
+<figure style="margin-left:20px; width:280px;  display: inline-block;">
+    <a href="${g.createLink(controller: 'basicOnlineStore', action: 'mensTopsTwo', params: [])}"
+       style="text-decoration: none; color:black;"><img
+            src="../assets/StockImages/MensTops2Front.jpeg" alt="Product_sportsbra" hspace="40"
+            width="200"><figcaption style="text-align: center">Lacoste Ombré Fade Golf Polo</figcaption></a>
+
+</figure>
+
+<figure style="margin-left:20px; width:280px;  display: inline-block;">
+    <a href="${g.createLink(controller: 'basicOnlineStore', action: 'mensTopsThree', params: [])}"
+       style="text-decoration: none; color:black;"><img
+            src="../assets/StockImages/MensTops3Front.jpeg" alt="Product_sportsbra" hspace="40"
+            width="200"><figcaption style="text-align: center">Club Room Solid Crewneck T-Shirt</figcaption></a>
+
+</figure>
+
 </body>
 </html>

@@ -51,6 +51,7 @@ function passValues() {
     let productTitle = document.getElementsByClassName("shop-item-title")[0].innerText
     let productPrice = document.getElementsByClassName("shop-item-price")[0].innerText
     addItemToCart(productTitle, productPrice, imageSrc, 1)
+    myFunction()
 }
 
 // Add the given item and quantity to the cart.
@@ -121,6 +122,11 @@ function displayCart(theDocument) {
     }
 }
 
+function clearDisplay(){
+    document.getElementsByClassName("cart-items")[0].innerHTML = ""
+    console.log("Cart should look empty")
+}
+
 //Changes quantity visual
 function quantityChanged(event, title) {
     var input = event.target
@@ -141,6 +147,7 @@ function quantityChanged(event, title) {
             //console.log("Updated item qauntity: "+cart[i].quantity)
             removeCartItem(event, title)
             addItemToCart(title, cart[i].price, cart[i].imageSrc, cart[i].quantity)
+            clearDisplay()
             displayCart()
         }
     }
@@ -193,6 +200,17 @@ function addToCartClicked(event) {
     var imageSrc = sessionStorage.getItem("image")
     addItemToCart(title, price, imageSrc)
     updateCartTotal()
+}
+
+function myFunction() {
+    // Get the snackbar DIV
+    var x = document.getElementById("snackbar");
+
+    // Add the "show" class to DIV
+    x.className = "show";
+
+    // After 3 seconds, remove the show class from DIV
+    setTimeout(function(){ x.className = x.className.replace("show", ""); }, 3000);
 }
 
 

@@ -82,9 +82,15 @@
                             <a class="dropdown-item"
                                href="${g.createLink(controller: 'basicOnlineStore', action: 'womensActiveWear', params: [])}">ACTIVE WEAR</a>
                             <a class="dropdown-item"
-                               href="${g.createLink(controller: 'basicOnlineStore', action: 'womensTops', params: [])}">TOPS</a>
-                            <a class="dropdown-item"
                                href="${g.createLink(controller: 'basicOnlineStore', action: 'womensBottoms', params: [])}">BOTTOMS</a>
+                            <a class="dropdown-item"
+                               href="${g.createLink(controller: 'basicOnlineStore', action: 'womensCoats', params: [])}">COATS</a>
+                            <a class="dropdown-item"
+                               href="${g.createLink(controller: 'basicOnlineStore', action: 'womensShoes', params: [])}">SHOES</a>
+                            <a class="dropdown-item"
+                               href="${g.createLink(controller: 'basicOnlineStore', action: 'womensSwimWear', params: [])}">SWIM WEAR</a>
+                            <a class="dropdown-item"
+                               href="${g.createLink(controller: 'basicOnlineStore', action: 'womensTops', params: [])}">TOPS</a>
                         </div>
 
                     </div>
@@ -99,11 +105,15 @@
                             <a class="dropdown-item"
                                href="${g.createLink(controller: 'basicOnlineStore', action: 'mensActiveWear', params: [])}">ACTIVE WEAR</a>
                             <a class="dropdown-item"
-                               href="${g.createLink(controller: 'basicOnlineStore', action: 'mensTops', params: [])}">TOPS</a>
-                            <a class="dropdown-item"
                                href="${g.createLink(controller: 'basicOnlineStore', action: 'mensBottoms', params: [])}">BOTTOMS</a>
                             <a class="dropdown-item"
-                               href="${g.createLink(controller: 'basicOnlineStore', action: 'mensCoats', params: [])}">OUTERWEAR</a>
+                               href="${g.createLink(controller: 'basicOnlineStore', action: 'mensCoats', params: [])}">COATS</a>
+                            <a class="dropdown-item"
+                               href="${g.createLink(controller: 'basicOnlineStore', action: 'mensShoes', params: [])}">SHOES</a>
+                            <a class="dropdown-item"
+                               href="${g.createLink(controller: 'basicOnlineStore', action: 'mensSwimWear', params: [])}">SWIM WEAR</a>
+                            <a class="dropdown-item"
+                               href="${g.createLink(controller: 'basicOnlineStore', action: 'mensTops', params: [])}">TOPS</a>
                         </div>
                     </div>
 
@@ -115,13 +125,19 @@
 
                         <div class="dropdown-menu" aria-labelledby="dropdownMenuButtonKid">
                             <a class="dropdown-item"
-                               href="${g.createLink(controller: 'basicOnlineStore', action: 'kidsGraphicTees', params: [])}">GRAPHIC TEES</a>
+                               href="${g.createLink(controller: 'basicOnlineStore', action: 'kidsCoats', params: [])}">COATS</a>
                             <a class="dropdown-item"
-                               href="${g.createLink(controller: 'basicOnlineStore', action: 'kidsTops', params: [])}">TOPS</a>
+                               href="${g.createLink(controller: 'basicOnlineStore', action: 'kidsDresses', params: [])}">DRESSES</a>
+                            <a class="dropdown-item"
+                               href="${g.createLink(controller: 'basicOnlineStore', action: 'kidsGraphicTees', params: [])}">GRAPHIC TEES</a>
                             <a class="dropdown-item"
                                href="${g.createLink(controller: 'basicOnlineStore', action: 'kidsJeans', params: [])}">JEANS</a>
                             <a class="dropdown-item"
-                               href="${g.createLink(controller: 'basicOnlineStore', action: 'kidsDresses', params: [])}">DRESSES</a>
+                               href="${g.createLink(controller: 'basicOnlineStore', action: 'kidsShoes', params: [])}">SHOES</a>
+                            <a class="dropdown-item"
+                               href="${g.createLink(controller: 'basicOnlineStore', action: 'kidsSwimWear', params: [])}">SWIM WEAR</a>
+                            <a class="dropdown-item"
+                               href="${g.createLink(controller: 'basicOnlineStore', action: 'kidsTops', params: [])}">TOPS</a>
                         </div>
                     </div>
 

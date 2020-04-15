@@ -157,7 +157,7 @@ function checkIfWf5Done() {
                 correctCart[2] = 1;
             }
 
-        }else if(item.title.localeCompare("Hawke and Co. Red Coat")==0){
+        }else if(item.title.localeCompare("Hawke and Co Red Coat")==0){
             if(item.quantity==1){
                 correctCart[3] = 1;
             }
