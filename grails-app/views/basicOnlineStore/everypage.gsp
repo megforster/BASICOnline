@@ -192,16 +192,26 @@
                 </ul>
             </div>
 
+           %{-- data-toggle="modal" data-target="#signIn">Sign In</button>
+            <button type=button" class="btn btn-info" data-toggle="modal" data-target="#create"
+            onclick="$(document).ready(function () {
+                        $('#searching').modal('show');
+                    });">--}%
+
+
+
             <div class="navbar-nav">
                 <li class="nav-item border rounded-circle mx-2 search-icon">
-                   
-                    <i class="fas fa-search p-2" onclick="$(document).ready(function () {
-                        $('search').modal('show');
-                    });">
-                    </i>
+                    <a class="fas fa-search p-2" data-toggle="modal" data-target="#searching">
+                    </a>
                 </li>
+                <li class="nav-item border rounded-circle mx-2 basket-icon">
+                    <a class="fas fa-shopping-basket p-2"
+                       href="${g.createLink(controller: 'basicOnlineStore', action: 'shoppingCart', params: [])}"></a>
+                </li>
+            </div>
 
-                <div id="search" class="modal fade" role="dialog">
+                <div id="searching" class="modal fade" role="dialog">
                     <div class="modal-dialog" data-dismiss="modal">
                         <div class="modal-content">
                             <div class="modal-body">
@@ -211,12 +221,6 @@
                         </div>
                     </div>
                 </div>
-
-                <li class="nav-item border rounded-circle mx-2 basket-icon">
-                    <a class="fas fa-shopping-basket p-2"
-                       href="${g.createLink(controller: 'basicOnlineStore', action: 'shoppingCart', params: [])}"></a>
-                </li>
-            </div>
         </nav>
     </div>
 

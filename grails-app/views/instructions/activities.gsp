@@ -86,9 +86,12 @@
 </div>
 <br>
 
-<iframe src="store" id="onlinestorexyz" width="1280" height="550" style = "padding-top: 50px; border:none" >
+<iframe src="store" class="myIframe" width="100%" style = "padding-top: 50px; border:none" >
 
 </iframe>
+<script type="text/javascript" language="javascript">
+    $('.myIframe').css('height', $(window).height()+'px');
+</script>
 
 <asset:javascript src="cart.js"/>
 <asset:javascript src="workflowCompletion.js"/>

@@ -1,6 +1,4 @@
 const cartName = "cart2";
-var tempCart=[]
-var saveCart = []
 runCart()
 
 //Makes sure everything is loaded properly before cart behavior begins
@@ -57,6 +55,7 @@ function passValues() {
 // Add the given item and quantity to the cart.
 // TO DO: If the item already exists, increase the quantity by the given amount
 function addItemToCart(title, price, imageSrc, quantity) {
+    console.log("DEBUG: ADDING ITEM TO CART")
     if (quantity === undefined) quantity = 1
 
    // console.log("DEBUG: In addItemToCart")
@@ -176,19 +175,20 @@ function removeCartItem(event, title) {
 
 //Clears the cart and displays a message when purchase button clicked
 function purchaseClicked(){
-    console.log("Purchase button was clicked")
-    if(JSON.parse(sessionStorage.getItem("cart")).length>0){
-        alert("Thank you for your purchase!")
-        var cartItems = document.getElementsByClassName("cart-items")[0]
-        while(cartItems.hasChildNodes()){
-            cartItems.removeChild(cartItems.firstChild)
-        }
-        updateCartTotal()
-        sessionStorage.removeItem("cart")
-    }else{
+    console.log("HELLO?????")
+    if(sessionStorage.getItem(cartName)==null){
         alert("You don't have anything in the cart to purchase!")
+    }else{
+        if(JSON.parse(sessionStorage.getItem(cartName)).length>0){
+            alert("Thank you for your purchase!")
+            var cartItems = document.getElementsByClassName("cart-items")[0]
+            while(cartItems.hasChildNodes()){
+                cartItems.removeChild(cartItems.firstChild)
+            }
+            updateCartTotal()
+            sessionStorage.removeItem(cartName)
+        }
     }
-
 }
 
 //Sets up item to be added to cart when add to cart button clicked

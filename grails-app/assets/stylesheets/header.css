@@ -106,18 +106,26 @@ header .site-title {
     color:black;
 }
 
+.fa-search{
+    color:dimgray;
+}
+
+.fa-search:hover {
+    text-decoration: none;
+    color:black!important;
+}
+
 .modal-body{
     text-align: left;
 }
 
 .modal {
-    position: relative;
-}
-
-.modal-dialog{
     position: fixed;
 }
 
+.modal-dialog{
+    position: relative;
+}
 
 
 .btn{
