@@ -5,7 +5,7 @@
   Time: 12:03 PM
 --%>
 
-%{--One of three women's sports bra product page--}%
+%{--One of two women's swimwear products page--}%
 <!DOCTYPE html>
 <html lang="en">
 <head>

@@ -106,19 +106,20 @@ h4{
 
 /*BOX 3*/
 
-.btn-purchase{
+.input-box3{
     position: absolute;
-    top: 1%;
-    left: 75%;
+    top: 9%;
+    right: 85%;
     margin: 20px 0;
 }
 
-.btn-purchase input{
+.input-box3 input{
     width: 125%;
     font-size: 16px;
     text-align: center;
     border: none;
     border-bottom: 2px solid #4A4A40;
+    border-radius: 4px;
     outline: none;
     padding: 10px;
     padding-left: 25px;
@@ -127,12 +128,12 @@ h4{
     color: #4A4A40;
 }
 
-.btn-purchase input:focus,
-.btn-purchase input:valid{
+.input-box3 input:focus,
+.input-box3 input:valid{
     border-bottom: 2px solid #B9BC47;
 }
 
-.btn0purchase .fa{
+.input-box3 .fa{
     position: absolute;
     top: 8px;
     Left: 0;
@@ -140,18 +141,19 @@ h4{
     color: #4A4A40;
 }
 
-.btn-purchase input[type="button"]{
+.input-box3 input[type="button"]{
     border: none;
     cursor: pointer;
-    background: #94dcfb;
+    background: #FF9F39;
     color: #fff;
     font-weight: bold;
     transition: 0.5s;
 }
 
-.btn-purchase input[type="button"]:hover{
-    background: #FF9F39;
+.input-box3 input[type="button"]:hover{
+    background: #94dcfb;
 }
-.btn-purchase a:hover {
-    color: #FF9F39;
+.input-box3 a:hover {
+    color: #94dcfb;
 }
+

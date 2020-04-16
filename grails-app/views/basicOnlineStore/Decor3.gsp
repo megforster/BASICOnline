@@ -4,7 +4,7 @@
   Date: 4/15/20
   Time: 12:33 PM
 --%>
-
+%{--One of three decor product page--}%
 <!DOCTYPE html>
 <html lang="en">
 <head>

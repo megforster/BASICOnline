@@ -1,4 +1,4 @@
-%{--Kid's converse sneakers product page--}%
+%{--One of three kid's shoes products page--}%
 <!DOCTYPE html>
 <html lang="en">
 <head>

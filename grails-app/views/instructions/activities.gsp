@@ -77,10 +77,10 @@
 
 <div id="placeHolderBack" style="visibility: hidden">
     <a href="${g.createLink(controller: 'account', action: 'workflows', params: [])}">
-        <div class="btn-purchase">
+        <div class="input-box3">
             <input type="button"
-            <g:actionSubmit value="Select Next Activity"/>
-        </input>
+                <g:actionSubmit value="Select Next Activity"/>
+            </input>
         </div>
     </a>
 </div>

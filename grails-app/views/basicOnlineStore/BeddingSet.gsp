@@ -5,7 +5,7 @@
   Time: 12:24 PM
 --%>
 
-%{--One of three women's sports bra product page--}%
+%{--Bedding set product page--}%
 <!DOCTYPE html>
 <html lang="en">
 <head>

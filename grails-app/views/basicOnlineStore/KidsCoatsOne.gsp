@@ -4,7 +4,7 @@
   Date: 4/16/20
   Time: 2:47 PM
 --%>
-
+%{--One of two kid's coats products page--}%
 <!DOCTYPE html>
 <html lang="en">
 <head>

@@ -4,7 +4,7 @@
   Date: 4/16/20
   Time: 3:13 PM
 --%>
-
+%{--One of three kid's jeans products page--}%
 <!DOCTYPE html>
 <html lang="en">
 <head>
