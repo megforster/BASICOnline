@@ -18,7 +18,7 @@
             integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6"
             crossorigin="anonymous"></script>
     <link rel="stylesheet" href="${resource(dir: 'css', file: 'style.css')}" type="text/css">
-    <link rel="icon" href="../assets/BASIC logo.jpg">
+    <link rel="icon" href="../assets/BASICLogo.jpg">
 </head>
 
 <body>
@@ -32,5 +32,28 @@
         $("#nav-placeholder").replaceWith(data);
     });
 </script>
+
+<figure style="margin-left:20px; width:280px; display: inline-block;">
+    <a href="${g.createLink(controller: 'basicOnlineStore', action: 'kidsCoatsOne', params: [])}"
+       style="text-decoration: none; color:black;"><img
+            src="../assets/StockImages/KidsCoat1Front.jpeg" alt="Product_sportsbra" hspace="40"
+            width="200"><figcaption style="text-align: center">Northface Zipline Jacket</figcaption></a>
+
+</figure>
+
+<figure style="margin-left:20px; width:280px;  display: inline-block;">
+    <img src="../assets/StockImages/OutOfStock.jpeg" alt="Product_sportsbra" hspace="40"
+            width="200"><figcaption style="text-align: center">Ralph Lauren Denim Jacket </figcaption></a>
+
+</figure>
+
+<figure style="margin-left:20px; width:280px;  display: inline-block;">
+    <a href="${g.createLink(controller: 'basicOnlineStore', action: 'kidsCoatsTwo', params: [])}"
+       style="text-decoration: none; color:black;"><img
+            src="../assets/StockImages/KidsCoat2Front.jpeg" alt="Product_sportsbra" hspace="40"
+            width="200"><figcaption style="text-align: center">Epic Threads Clear Heart Raincoat</figcaption></a>
+
+</figure>
+
 </body>
 </html>

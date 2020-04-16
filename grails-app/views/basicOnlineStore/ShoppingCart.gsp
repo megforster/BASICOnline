@@ -19,7 +19,7 @@
             crossorigin="anonymous"></script>
     <asset:javascript src="cart.js"/>
     <link rel="stylesheet" href="${resource(dir: 'css', file: 'cart.css')}" type="text/css">
-    <link rel="icon" href="../assets/BASIC logo.jpg">
+    <link rel="icon" href="../assets/BASICLogo.jpg">
 </head>
 
 <body>

@@ -18,7 +18,7 @@
             integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6"
             crossorigin="anonymous"></script>
     <link rel="stylesheet" href="${resource(dir: 'css', file: 'style.css')}" type="text/css">
-    <link rel="icon" href="../assets/BASIC logo.jpg">
+    <link rel="icon" href="../assets/BASICLogo.jpg">
 </head>
 
 <body>
@@ -32,5 +32,26 @@
         $("#nav-placeholder").replaceWith(data);
     });
 </script>
+
+<figure style="margin-left:20px; width:280px; display: inline-block;">
+    <a href="${g.createLink(controller: 'basicOnlineStore', action: 'kidsTopsOne', params: [])}"
+       style="text-decoration: none; color:black;"><img src="../assets/StockImages/KidsTops1Front.jpeg" alt="Product_sportsbra" hspace="40" width="200"><figcaption
+            style="text-align: center">Tommy Hilifigure Ken Tee</figcaption></a>
+</figure>
+
+<figure style="margin-left:20px; width:280px;  display: inline-block;">
+    <a href="${g.createLink(controller: 'basicOnlineStore', action: 'KidsTopsTwo', params: [])}"
+       style="text-decoration: none; color:black;"><img src="../assets/StockImages/KidsTops2Front.jpeg" alt="Product_sportsbra" hspace="40" width="200"><figcaption
+            style="text-align: center">Ralph Lauren Jersey Polo Shirt</figcaption></a>
+
+</figure>
+
+<figure style="margin-left:20px; width:280px;  display: inline-block;">
+    <a href="${g.createLink(controller: 'basicOnlineStore', action: 'kidsTopsThree', params: [])}"
+       style="text-decoration: none; color:black;"><img src="../assets/StockImages/KidsTops3Front.jpeg" alt="Product_sportsbra" hspace="40" width="200"><figcaption
+            style="text-align: center">Belle Du Jour Floral Print Top</figcaption></a>
+
+</figure>
+
 </body>
 </html>

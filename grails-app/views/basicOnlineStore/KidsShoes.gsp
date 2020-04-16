@@ -18,7 +18,7 @@
             integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6"
             crossorigin="anonymous"></script>
     <link rel="stylesheet" href="${resource(dir: 'css', file: 'style.css')}" type="text/css">
-    <link rel="icon" href="../assets/BASIC logo.jpg">
+    <link rel="icon" href="../assets/BASICLogo.jpg">
 </head>
 
 <body>
@@ -39,6 +39,20 @@
            style="text-decoration: none; color:black;"><img src="../assets/StockImages/side.jpg" alt="Product_sneakers"
                                                             hspace="40" width="100"><figcaption
                 style="text-align: center">Converse Sneakers</figcaption></a>
+    </figure>
+
+    <figure style="margin-left:20px; width:150px; display: inline-block;">
+        <a href="${g.createLink(controller: 'basicOnlineStore', action: 'kidsShoesTwo', params: [])}"
+           style="text-decoration: none; color:black;"><img src="../assets/StockImages/KidsShoes2Front.jpeg" alt="Product_sneakers"
+                                                            hspace="40" width="100"><figcaption
+                style="text-align: center">DEER STAGS High Top Sneaker Boot</figcaption></a>
+    </figure>
+
+    <figure style="margin-left:20px; width:150px; display: inline-block;">
+        <a href="${g.createLink(controller: 'basicOnlineStore', action: 'kidsShoesThree', params: [])}"
+           style="text-decoration: none; color:black;"><img src="../assets/StockImages/KidsShoes3Front.jpeg" alt="Product_sneakers"
+                                                            hspace="40" width="100"><figcaption
+                style="text-align: center">Totes Tall Waterproof Rain Boots</figcaption></a>
     </figure>
 
 </div>

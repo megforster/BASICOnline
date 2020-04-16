@@ -17,7 +17,7 @@
             crossorigin="anonymous"></script>
     <link rel="stylesheet" href="${resource(dir: 'css', file: 'GenericProductStyle.css')}" type="text/css">
     <asset:javascript src="cart.js"/>
-    <link rel="icon" href="../assets/BASIC logo.jpg">
+    <link rel="icon" href="../assets/BASICLogo.jpg">
 </head>
 
 <body>

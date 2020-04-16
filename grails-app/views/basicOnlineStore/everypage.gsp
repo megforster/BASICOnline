@@ -6,6 +6,7 @@
     <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" rel="stylesheet">
     <script src="https://kit.fontawesome.com/4e611744ca.js" crossorigin="anonymous"></script>
     <link rel="stylesheet" href="${resource(dir: 'css', file: 'header.css')}" type="text/css">
+    <link rel="icon" href="../assets/BASICLogo.jpg">
 </head>
 
 <body>
@@ -193,8 +194,9 @@
 
             <div class="navbar-nav">
                 <li class="nav-item border rounded-circle mx-2 search-icon">
+                   
                     <i class="fas fa-search p-2" onclick="$(document).ready(function () {
-                        $('#search').modal('show');
+                        $('search').modal('show');
                     });">
                     </i>
                 </li>

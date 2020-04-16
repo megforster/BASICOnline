@@ -22,8 +22,32 @@ class BasicOnlineStoreController {
         render(view:"KidsJeans")
     }
 
+    def kidsJeansOne(){
+        render(view:"KidsJeans1")
+    }
+
+    def kidsJeansTwo(){
+        render(view:"KidsJeans2")
+    }
+
+    def kidsJeansThree(){
+        render(view:"KidsJeans3")
+    }
+
     def kidsSwimWear(){
         render(view:"KidsSwimWear")
+    }
+
+    def kidsSwimOne(){
+        render(view:"KidsSwim1")
+    }
+
+    def kidsSwimTwo(){
+        render(view:"KidsSwim2")
+    }
+
+    def kidsSwimThree(){
+        render(view:"KidsSwim3")
     }
 
     //Renders bath page
@@ -79,9 +103,29 @@ class BasicOnlineStoreController {
         render(view: "KidsCoats")
     }
 
+    def kidsCoatsOne(){
+        render(view: "KidsCoatsOne")
+    }
+
+    def kidsCoatsTwo(){
+        render(view: "KidsCoatsTwo")
+    }
+
     //Renders kid's dresses page
     def kidsDresses(){
         render(view: "KidsDresses")
+    }
+
+    def kidsDressOne(){
+        render(view: "KidsDressOne")
+    }
+
+    def kidsDressTwo(){
+        render(view: "KidsDressTwo")
+    }
+
+    def kidsDressThree(){
+        render(view: "KidsDressThree")
     }
 
     //Renders kid's graphic tees page
@@ -99,9 +143,29 @@ class BasicOnlineStoreController {
         render(view: "KidsSneaker")
     }
 
+    def kidsShoesTwo(){
+        render(view:"KidsShoesTwo")
+    }
+
+    def kidsShoesThree(){
+        render(view:"KidsShoesThree")
+    }
+
     //Renders kid's tops page
     def kidsTops(){
         render(view: "KidsTops")
+    }
+
+    def kidsTopsOne(){
+        render(view: "KidsTops1")
+    }
+
+    def kidsTopsTwo(){
+        render(view: "KidsTops2")
+    }
+
+    def kidsTopsThree(){
+        render(view: "KidsTops3")
     }
 
     //Renders men's active wear page

@@ -25,7 +25,7 @@
             integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6"
             crossorigin="anonymous"></script>
     <link rel="stylesheet" href="${resource(dir: 'css', file: 'style.css')}" type="text/css">
-    <link rel="icon" href="../assets/BASIC logo.jpg">
+    <link rel="icon" href="../assets/BASICLogo.jpg">
 </head>
 
 <body>
@@ -43,10 +43,23 @@
 <div class=row1>
 
     <figure style="margin-left:20px; width:280px; display: inline-block;">
-        <a href="${g.createLink(controller: 'basicOnlineStore', action: 'mensRedCoat', params: [])}"
-           style="text-decoration: none; color:black;"><img src="../assets/StockImages/coatFront.jpeg"
-                                                            alt="Product_coat" hspace="40" width="200"><figcaption
-                style="text-align: center">Hawke and Co Coat</figcaption></a>
+        <a href="${g.createLink(controller: 'basicOnlineStore', action: 'kidsSwimOne', params: [])}"
+           style="text-decoration: none; color:black;"><img src="../assets/StockImages/KidsSwim1Front.jpeg" alt="Product_sportsbra" hspace="40" width="200"><figcaption
+                style="text-align: center">First Impressions 2-Pc Great Catch Swim Trunks</figcaption></a>
+    </figure>
+
+    <figure style="margin-left:20px; width:280px;  display: inline-block;">
+        <a href="${g.createLink(controller: 'basicOnlineStore', action: 'kidsSwimTwo', params: [])}"
+           style="text-decoration: none; color:black;"><img src="../assets/StockImages/KidsSwim2Front.jpeg" alt="Product_sportsbra" hspace="40" width="200"><figcaption
+                style="text-align: center">Breaking Waves Washed Out Flounce Tankini</figcaption></a>
+
+    </figure>
+
+    <figure style="margin-left:20px; width:280px;  display: inline-block;">
+        <a href="${g.createLink(controller: 'basicOnlineStore', action: 'kidsSwimThree', params: [])}"
+           style="text-decoration: none; color:black;"><img src="../assets/StockImages/KidsSwim3Front.jpeg" alt="Product_sportsbra" hspace="40" width="200"><figcaption
+                style="text-align: center">Nike Razorback Swimsuit</figcaption></a>
+
     </figure>
 </div>
 </body>

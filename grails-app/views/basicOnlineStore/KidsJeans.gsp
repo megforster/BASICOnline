@@ -18,7 +18,7 @@
             integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6"
             crossorigin="anonymous"></script>
     <link rel="stylesheet" href="${resource(dir: 'css', file: 'style.css')}" type="text/css">
-    <link rel="icon" href="../assets/BASIC logo.jpg">
+    <link rel="icon" href="../assets/BASICLogo.jpg">
 </head>
 
 <body>
@@ -33,6 +33,25 @@
     });
 </script>
 
-<h1>Kids Jeans</h1>
+<figure style="margin-left:20px; width:280px; display: inline-block;">
+    <a href="${g.createLink(controller: 'basicOnlineStore', action: 'kidsJeansOne', params: [])}"
+       style="text-decoration: none; color:black;"><img src="../assets/StockImages/KidsJeans1Front.jpeg" alt="Product_sportsbra" hspace="40" width="200"><figcaption
+            style="text-align: center">Ring of Fire Distressed Denim Slim-Fit Jeans</figcaption></a>
+</figure>
+
+<figure style="margin-left:20px; width:280px;  display: inline-block;">
+    <a href="${g.createLink(controller: 'basicOnlineStore', action: 'kidsJeansTwo', params: [])}"
+       style="text-decoration: none; color:black;"><img src="../assets/StockImages/KidsJeans2Front.jpeg" alt="Product_sportsbra" hspace="40" width="200"><figcaption
+            style="text-align: center">Tommy Hilifigure Niagara Stretch Jeans</figcaption></a>
+
+</figure>
+
+<figure style="margin-left:20px; width:280px;  display: inline-block;">
+    <a href="${g.createLink(controller: 'basicOnlineStore', action: 'kidsJeansThree', params: [])}"
+       style="text-decoration: none; color:black;"><img src="../assets/StockImages/KidsJeans3Front.jpeg" alt="Product_sportsbra" hspace="40" width="200"><figcaption
+            style="text-align: center">Epic Threads Shore Destroyed Jeans</figcaption></a>
+
+</figure>
+
 </body>
 </html>
