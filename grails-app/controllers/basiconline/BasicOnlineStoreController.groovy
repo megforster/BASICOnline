@@ -22,30 +22,37 @@ class BasicOnlineStoreController {
         render(view:"KidsJeans")
     }
 
+    //Renders a kid's jean product page
     def kidsJeansOne(){
         render(view:"KidsJeans1")
     }
 
+    //Renders a kid's jean product page
     def kidsJeansTwo(){
         render(view:"KidsJeans2")
     }
 
+    //Renders a kid's jean product page
     def kidsJeansThree(){
         render(view:"KidsJeans3")
     }
 
+    //Renders kid's swimwear page
     def kidsSwimWear(){
         render(view:"KidsSwimWear")
     }
 
+    //Renders a kid's swimwear product page
     def kidsSwimOne(){
         render(view:"KidsSwim1")
     }
 
+    //Renders a kid's swimwear product page
     def kidsSwimTwo(){
         render(view:"KidsSwim2")
     }
 
+    //Renders a kid's swimwear product page
     def kidsSwimThree(){
         render(view:"KidsSwim3")
     }
@@ -65,20 +72,23 @@ class BasicOnlineStoreController {
         render(view: "Bedding")
     }
 
-    //Renders decour page
+    //Renders decor page
     def decor(){
         render(view: "Decor")
     }
 
+    //Renders a decor product page
     def decor1(){
         render(view:"Decor1")
     }
 
+    //Renders a decor product page
     def decor2(){
         render(view:"Decor2")
 
     }
 
+    //Renders a decor product page
     def decor3(){
         render(view:"Decor3")
     }
@@ -103,10 +113,12 @@ class BasicOnlineStoreController {
         render(view: "KidsCoats")
     }
 
+    //Renders a kid's coat product page
     def kidsCoatsOne(){
         render(view: "KidsCoatsOne")
     }
 
+    //Renders a kid's coat prodcut
     def kidsCoatsTwo(){
         render(view: "KidsCoatsTwo")
     }
@@ -116,14 +128,17 @@ class BasicOnlineStoreController {
         render(view: "KidsDresses")
     }
 
+    //Renders kid's dress product page
     def kidsDressOne(){
         render(view: "KidsDressOne")
     }
 
+    //Renders kid's dress product page
     def kidsDressTwo(){
         render(view: "KidsDressTwo")
     }
 
+    //Renders kid's dress product page
     def kidsDressThree(){
         render(view: "KidsDressThree")
     }
@@ -143,10 +158,12 @@ class BasicOnlineStoreController {
         render(view: "KidsSneaker")
     }
 
+    //Renders a kids shoe product page
     def kidsShoesTwo(){
         render(view:"KidsShoesTwo")
     }
 
+    //Renders a kids shoe product page
     def kidsShoesThree(){
         render(view:"KidsShoesThree")
     }
@@ -156,14 +173,17 @@ class BasicOnlineStoreController {
         render(view: "KidsTops")
     }
 
+    //Redners a kid's top product page
     def kidsTopsOne(){
         render(view: "KidsTops1")
     }
 
+    //Renders a kid's top product page
     def kidsTopsTwo(){
         render(view: "KidsTops2")
     }
 
+    //Renders a kid's top product page
     def kidsTopsThree(){
         render(view: "KidsTops3")
     }
@@ -178,14 +198,17 @@ class BasicOnlineStoreController {
         render(view: "MensBottoms")
     }
 
+    //Renders a men's bottom product page
     def mensBottomsOne(){
         render(view:"MensPants1")
     }
 
+    //Renders a men's bottom product page
     def mensBottomsTwo(){
         render(view:"MensPants2")
     }
 
+    //Renders kid's dress product page
     def mensBottomsThree(){
         render(view:"MensPants3")
     }
@@ -205,10 +228,12 @@ class BasicOnlineStoreController {
         render(view: "MensShoes")
     }
 
+    //Renders a men's shoe product page
     def mensShoesOne(){
         render(view:"MensShoes1")
     }
 
+    //Renders a men's shoe product page
     def mensShoesTwo(){
         render(view:"MensShoes2")
     }
@@ -218,34 +243,42 @@ class BasicOnlineStoreController {
         render(view: "MensTops")
     }
 
+    //Renders a men's top product page
     def mensTopsOne(){
         render(view:"MensTops1")
     }
 
+    //Renders a men's top product page
     def mensTopsTwo(){
         render(view:"MensTops2")
     }
 
+    //Renders a men's top product page
     def mensTopsThree(){
         render(view:"MensTops3")
     }
 
+    //Renders men's swimwear page
     def mensSwimWear(){
         render(view:"MensSwimWear")
     }
 
+    //Renders men's swimwear product page
     def mensSwimOne(){
         render(view:"MensSwim1")
     }
 
+    //Renders a men's swimwear product page
     def mensSwimTwo(){
         render(view:"MensSwim2")
     }
 
+    //Renders a men's swimwear product page
     def mensSwimThree(){
         render(view:"MensSwim3")
     }
 
+    //Renders a men's shorts product page
     def mensShorts(){
         render(view:"MensShorts")
     }
@@ -290,38 +323,47 @@ class BasicOnlineStoreController {
         render(view: "WomensLeggings")
     }
 
+    //Renders a women's coat product page
     def womensCoatOne(){
         render(view:"WomensCoatOne")
     }
 
+    //Renders a women's coat product page
     def womensCoatTwo(){
         render(view:"WomensCoatTwo")
     }
 
+    //Renders a women's coat product page
     def womensCoatThree(){
         render(view:"WomensCoatThree")
     }
 
+    //Renders a women's swimwear product page
     def womensSwimOne(){
         render(view:"WomensSwim1")
     }
 
+    //Renders a women's swimwear product page
     def womensSwimTwo(){
         render(view:"WomensSwim2")
     }
 
+    //Renders a women's top product page
     def womensTopOne(){
         render(view:"WomensTop1")
     }
 
+    //Renders a women's top product page
     def womensTopTwo(){
         render(view:"WomensTop2")
     }
 
+    //Renders a women's top product page
     def womensTopThree(){
         render(view:"WomensTop3")
     }
 
+    //Renders a women's dress pants product page
     def womensDressPants(){
         render(view:"WomensDressPants")
     }
@@ -341,6 +383,7 @@ class BasicOnlineStoreController {
         render(view: "everypage")
     }
 
+    //Renders a bedding set product page
     def beddingSet(){
         render(view:"BeddingSet")
     }

@@ -116,8 +116,8 @@ function checkIfWf4Done() {
     for (var i = 0; i < itemsInCart.length; i++) {
         item = itemsInCart[i]
         //console.log("CHECKING"+item)
-        console.log(item.quantity)
-        if (item.quantity == 1) {
+        if (item.quantity === 1 && item.title.localeCompare("Magnolia Bath Accessory Set")==0) {
+            console.log(item.title)
             alert("Great Job! You Completed the Activity!")
             document.getElementById('placeHolderBack').style.visibility = "visible"
             window.clearInterval(myInterval);
