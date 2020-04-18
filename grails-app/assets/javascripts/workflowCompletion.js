@@ -16,6 +16,15 @@ let num = half.split(":")[0]
 //Create variable for repeating check
 let myInterval;
 
+
+//Booleans and array used in Workflow 5 Completion
+let correctCart = []
+let addedL = false;
+let addedS = false;
+let addedM = false;
+let addedH = false;
+
+
 //Compares the activities number against a number 1-5 representing possible activities
 //Calls respective activity set up function and creates the interval for repeated completion checking every second
 if (1 == num) {
@@ -56,7 +65,7 @@ function checkIfWf1Done() {
     //console.log("CHECKING!!!")
     if (sessionStorage.getItem("URI") != null) {
         if (sessionStorage.getItem("URI") == "http://localhost:8080/basicOnlineStore/MensRedCoat") {
-            alert("Great Job! You Completed the Activity!")
+            alert("Great Job! You Completed Activity 1!")
             document.getElementById('placeHolderBack').style.visibility = "visible"
             sessionStorage.removeItem("URI")
             window.clearInterval(myInterval);
@@ -71,13 +80,17 @@ function checkIfWf1Done() {
 //Sets up online store for activity 2
 function wf2SetUp() {
     emptyCart()
+    addedL = false;
+    addedH = false;
+    addedM = false;
+    addedS = false;
 }
 
 //Checks online store to see if activity 2 has been completed
 function checkIfWf2Done() {
     cart = loadCart()
     if (cart != null && cart.length > 0) {
-        alert("Great Job! You Completed the Activity!")
+        alert("Great Job! You Completed Activity 2!")
         document.getElementById('placeHolderBack').style.visibility = "visible"
         window.clearInterval(myInterval);
     }
@@ -95,7 +108,7 @@ function wf3SetUp() {
 function checkIfWf3Done() {
     cart = loadCart()
     if (cart == null || cart.length == 0) {
-        alert("Great Job! You Completed the Activity!")
+        alert("Great Job! You Completed Activity 3!")
         document.getElementById('placeHolderBack').style.visibility = "visible"
         emptyCart()
         window.clearInterval(myInterval);
@@ -116,9 +129,9 @@ function checkIfWf4Done() {
     for (var i = 0; i < itemsInCart.length; i++) {
         item = itemsInCart[i]
         //console.log("CHECKING"+item)
-        if (item.quantity === 1 && item.title.localeCompare("Magnolia Bath Accessory Set")==0) {
+        if (item.quantity === 1 && item.title.localeCompare("Magnolia Bath Accessory Set") == 0) {
             console.log(item.title)
-            alert("Great Job! You Completed the Activity!")
+            alert("Great Job! You Completed Activity 4!")
             document.getElementById('placeHolderBack').style.visibility = "visible"
             window.clearInterval(myInterval);
         }
@@ -132,41 +145,60 @@ function wf5SetUp() {
     addItemToCart("Champion Sports Bra", 24.00, "http://localhost:8080/assets/StockImages/WomensActiveWear/SportsBra3Front.jpeg", 1)
     addItemToCart("Kid's Converse Sneakers", 50.45, "http://localhost:8080/assets/StockImages/side.jpg", 1)
     let itemsInCart = loadCart()
-    for(let i = 0; i<loadCart().length; i++){
-        console.log(itemsInCart[i])
-    }
+    correctCart = []
 }
 
 //Checks online store to see if activity 5 has been completed
 function checkIfWf5Done() {
     let itemsInCart = loadCart()
-    let correctCart = []
     for (var i = 0; i < itemsInCart.length; i++) {
-        item = itemsInCart[i]
-        console.log(item)
-        if(item.title.localeCompare("Yogalicious Leggings")==0){
-            if(item.quantity==2){
-                correctCart[0] = 1;
+        let item = itemsInCart[i]
+        //console.log(item)
+        //console.log("THIS IS CORRECT CART LENTH: "+ correctCart.length);
+        /*for(let i = 0; i< correctCart.length;i++){
+            console.log("THIS IS CORRECT CART LENTH: "+ correctCart.length);
+            console.log("THIS IS COMPLETION CRITERIA"+correctCart[i]);
+        }*/
+
+        if (item.title.localeCompare("Yogalicious Leggings") == 0) {
+            if (item.quantity == 2) {
+                if (!addedL) {
+                    correctCart.push(1);
+                    //console.log("Pushed leggings!")
+                    addedL = true;
+                }
             }
-        }else if(item.title.localeCompare("Kid's Converse Sneakers")==0){
-            if(item.quantity==2){
-                correctCart[1] = 1;
+        } else if (item.title.localeCompare("Kid's Converse Sneakers") == 0) {
+            if (item.quantity == 2) {
+                if (!addedS) {
+                    correctCart.push(2);
+                    //console.log("Pushed sneakers!")
+                    addedS = true;
+                }
             }
-        }else if(item.title.localeCompare("Magnolia Bath Accessory Set")==0){
-            if(item.quantity==1){
-                correctCart[2] = 1;
+        } else if (item.title.localeCompare("Magnolia Bath Accessory Set") == 0) {
+            if (item.quantity == 1) {
+                if (!addedM) {
+                    correctCart.push(3);
+                    //console.log("Pushed bath set!")
+                    addedM = true;
+                }
             }
 
-        }else if(item.title.localeCompare("Hawke and Co Red Coat")==0){
-            if(item.quantity==1){
-                correctCart[3] = 1;
+        } else if (item.title.localeCompare("Hawke and Co Red Coat") == 0) {
+            if (item.quantity == 1) {
+                if (!addedH) {
+                    correctCart.push(4);
+                    //console.log("Pushed jacket!")
+                    addedH = true;
+                }
             }
-        }else{
+        } else {
 
         }
     }
-    if(correctCart.length==4){
-        alert("Great Job! You Completed the Activity!")
+    if (correctCart.length === 4) {
+        alert("Great Job! You Completed Activity 5!")
         document.getElementById('placeHolderBack').style.visibility = "visible"
         window.clearInterval(myInterval);
     }
