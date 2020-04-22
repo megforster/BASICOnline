@@ -75,7 +75,27 @@
     </div>
 </div>
 
-<div id="placeHolderBack" style="visibility: hidden">
+<div class="modal fade" id="activityComplete" tabindex="-1" role="dialog" aria-labelledby="activityCompleteLabel"
+     aria-hidden="true">
+    <div class="modal-dialog" role="document">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h5 class="modal-title" id="activityCompleteLabel">You Completed the Activity!</h5>
+            </div>
+
+            <div class="modal-body">
+                <p id="wf#"></p>
+                <a href="${g.createLink(controller: 'account', action: 'workflows', params: [])}">
+                        <input type="button"
+                        <g:actionSubmit value="Select Next Activity"/>
+                    </input>
+                </a>
+            </div>
+        </div>
+    </div>
+</div>
+
+%{--<div id="placeHolderBack" style="visibility: hidden">
     <a href="${g.createLink(controller: 'account', action: 'workflows', params: [])}">
         <div class="input-box3">
             <input type="button"
@@ -83,7 +103,7 @@
             </input>
         </div>
     </a>
-</div>
+</div>--}%
 <br>
 
 <iframe src="store" class="myIframe" width="100%" style = "padding-top: 50px; border:none" >

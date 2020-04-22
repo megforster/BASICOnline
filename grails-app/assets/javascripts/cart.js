@@ -155,6 +155,7 @@ function quantityChanged(event, title) {
 
 //Updates the displayed cart total
 function updateCartTotal() {
+    console.log("Updating cart total!!!!!")
     let total = 0
     let cart = loadCart()
     cart.forEach(item => total += item.price * item.quantity)

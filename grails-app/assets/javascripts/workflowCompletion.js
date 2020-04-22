@@ -65,14 +65,10 @@ function checkIfWf1Done() {
     //console.log("CHECKING!!!")
     if (sessionStorage.getItem("URI") != null) {
         if (sessionStorage.getItem("URI") == "http://localhost:8080/basicOnlineStore/MensRedCoat") {
-            alert("Great Job! You Completed Activity 1!")
-            document.getElementById('placeHolderBack').style.visibility = "visible"
+            document.getElementById('wf#').innerText = "Great Job! You Completed Activity 1!"
+            $('#activityComplete').modal('show');
             sessionStorage.removeItem("URI")
             window.clearInterval(myInterval);
-            for (var i = 0; i < itemsInCart.length; i++) {
-                item = itemsInCart[i]
-                console.log(item)
-            }
         }
     }
 }
@@ -90,8 +86,8 @@ function wf2SetUp() {
 function checkIfWf2Done() {
     cart = loadCart()
     if (cart != null && cart.length > 0) {
-        alert("Great Job! You Completed Activity 2!")
-        document.getElementById('placeHolderBack').style.visibility = "visible"
+        document.getElementById('wf#').innerText = "Great Job! You Completed Activity 2!"
+        $('#activityComplete').modal('show');
         window.clearInterval(myInterval);
     }
 }
@@ -107,9 +103,11 @@ function wf3SetUp() {
 //Checks online store to see if activity 3 has been completed
 function checkIfWf3Done() {
     cart = loadCart()
+    console.log("HERE!")
+    console.log(cart.length)
     if (cart == null || cart.length == 0) {
-        alert("Great Job! You Completed Activity 3!")
-        document.getElementById('placeHolderBack').style.visibility = "visible"
+        document.getElementById('wf#').innerText = "Great Job! You Completed Activity 3!"
+        $('#activityComplete').modal('show');
         emptyCart()
         window.clearInterval(myInterval);
     }
@@ -124,15 +122,12 @@ function wf4SetUp() {
 //Not working, trying to figure out how to get quanity changes to save to item
 //Checks online store to see if activity 4 has been completed
 function checkIfWf4Done() {
-    console.log("-------Checking if 4 done-------")
     let itemsInCart = loadCart()
     for (var i = 0; i < itemsInCart.length; i++) {
         item = itemsInCart[i]
-        //console.log("CHECKING"+item)
-        if (item.quantity === 1 && item.title.localeCompare("Magnolia Bath Accessory Set") == 0) {
-            console.log(item.title)
-            alert("Great Job! You Completed Activity 4!")
-            document.getElementById('placeHolderBack').style.visibility = "visible"
+        if (item.quantity == 1 && item.title.localeCompare("Magnolia Bath Accessory Set") == 0) {
+            document.getElementById('wf#').innerText = "Great Job! You Completed Activity 4!"
+            $('#activityComplete').modal('show');
             window.clearInterval(myInterval);
         }
     }
@@ -153,18 +148,10 @@ function checkIfWf5Done() {
     let itemsInCart = loadCart()
     for (var i = 0; i < itemsInCart.length; i++) {
         let item = itemsInCart[i]
-        //console.log(item)
-        //console.log("THIS IS CORRECT CART LENTH: "+ correctCart.length);
-        /*for(let i = 0; i< correctCart.length;i++){
-            console.log("THIS IS CORRECT CART LENTH: "+ correctCart.length);
-            console.log("THIS IS COMPLETION CRITERIA"+correctCart[i]);
-        }*/
-
         if (item.title.localeCompare("Yogalicious Leggings") == 0) {
             if (item.quantity == 2) {
                 if (!addedL) {
                     correctCart.push(1);
-                    //console.log("Pushed leggings!")
                     addedL = true;
                 }
             }
@@ -172,7 +159,6 @@ function checkIfWf5Done() {
             if (item.quantity == 2) {
                 if (!addedS) {
                     correctCart.push(2);
-                    //console.log("Pushed sneakers!")
                     addedS = true;
                 }
             }
@@ -180,7 +166,6 @@ function checkIfWf5Done() {
             if (item.quantity == 1) {
                 if (!addedM) {
                     correctCart.push(3);
-                    //console.log("Pushed bath set!")
                     addedM = true;
                 }
             }
@@ -189,7 +174,6 @@ function checkIfWf5Done() {
             if (item.quantity == 1) {
                 if (!addedH) {
                     correctCart.push(4);
-                    //console.log("Pushed jacket!")
                     addedH = true;
                 }
             }
@@ -198,8 +182,8 @@ function checkIfWf5Done() {
         }
     }
     if (correctCart.length === 4) {
-        alert("Great Job! You Completed Activity 5!")
-        document.getElementById('placeHolderBack').style.visibility = "visible"
+        document.getElementById('wf#').innerText = "Great Job! You Completed Activity 5!"
+        $('#activityComplete').modal('show');
         window.clearInterval(myInterval);
     }
 }
