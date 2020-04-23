@@ -23,7 +23,7 @@ class AccountController {
         def passwrd = params.password
         def usr = Users.findByEmailAddressAndPassword(email, passwrd)
         if(usr!=null) {
-            render(view: "workflows", model: [usr:usr])
+            render(view: "activitySelection", model: [usr:usr])
         }else{
             render(view:"incorrectInput")
         }
@@ -55,7 +55,7 @@ class AccountController {
     //Logic handles logging a user in as a guest using a default guest account auto-populated into the database
     def guestUsr(){
         def usr = Users.findByEmailAddressAndPassword("-", "guest")
-        render(view: "workflows", model: [usr: usr])
+        render(view: "activitySelection", model: [usr: usr])
     }
 
     /* Not currently in use as the placement exam was backlogged
@@ -73,7 +73,7 @@ class AccountController {
     //Logic for displaying workflow selection
     def workflows(){
         def usr = Users.findByEmailAddressAndPassword(params.emailAddress, params.password)
-        render(view: "workflows")
+        render(view: "activitySelection")
     }
 
 }

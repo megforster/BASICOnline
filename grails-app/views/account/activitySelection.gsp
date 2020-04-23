@@ -23,7 +23,7 @@
 <h3>Select an Activity</h3>
 
 <div class="form">
-    <h2>You can chose a completely new activity or work on improving your score for one you've already completed.</h2>
+    <h2>You can chose any activity you'd like to try below! Keep in mind, Activity 1 is the easiest and Activity 5 is the hardest.</h2>
 
     <div class="input-box">
         <p>

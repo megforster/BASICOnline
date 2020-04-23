@@ -42,13 +42,8 @@
             <div id="carouselExampleControls" class="carousel slide" data-ride="carousel">
                 <div class="carousel-inner">
                     <div class="carousel-item active">
-                        <img class="shop-item-image " src="../assets/StockImages/BeddingSet1.jpeg"
+                        <img class="shop-item-image " src="../assets/StockImages/Decor3.jpeg"
                              class="d-block w-100" alt="First Slide">
-                    </div>
-
-                    <div class="carousel-item">
-                        <img src="../assets/StockImages/BeddingSet2.jpeg" class="d-block w-100"
-                             alt="Second Slide">
                     </div>
                 </div>
                 <a class="carousel-control-prev" href="#carouselExampleControls" role="button" data-slide="prev">
