@@ -97,7 +97,6 @@ function wf3SetUp() {
     emptyCart()
     addItemToCart("Love Graphic Tee", 10, "http://localhost:8080/assets/StockImages/KidsGraphicTees/Tee1Front.jpeg")
     addItemToCart("Love Graphic Tee B", 15, "http://localhost:8080/assets/StockImages/KidsGraphicTees/Tee1Front.jpeg")
-    updateCartTotal()
 }
 
 //Checks online store to see if activity 3 has been completed
