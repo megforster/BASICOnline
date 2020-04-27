@@ -39,7 +39,7 @@
 </body>
 
 <body>
-<g:img dir="assets" file="BASICLogo.jpg"/>
+<g:img dir="assets" file="BASICLogo.png"/>
 </body>
 
 </html>

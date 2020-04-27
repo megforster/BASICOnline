@@ -5,12 +5,12 @@ body{
     left: 0;
     width: 50%;
     height: 100%;
-    background: #000000;
+    background: #94dcfb;
 
     margin: 0;
     padding: 0;
     font-family: sans-serif;
-    background-image: url(../images/BASICLogo.jpg);
+    background-image: url(../images/BASICLogo.png);
     background-position: 85%, 0%;
     background-size: 40%;
     background-repeat: no-repeat;

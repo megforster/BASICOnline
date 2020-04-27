@@ -39,8 +39,6 @@
                 <g:actionSubmit value="Submit" params="${[emailAddress: emailAddress, password: password]}"/>
             </div>
         </g:form>
-
-        <a href="#">Forgot Password</a>
     </forms>
 </div>
 
